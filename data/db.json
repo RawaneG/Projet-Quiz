@@ -1,0 +1,19 @@
+{
+    "users":
+    [
+        {
+        "nom_complet":"Rawane",
+        "login":"rawane.meissa@gmail.com",
+        "password":"rawane10",
+        "role":"ROLE_JOUEUR",
+        "score":15
+        },
+        {
+        "nom_complet":"Meissa Sow",
+        "login":"meissa.sow@gmail.com",
+        "password":"rawane10",
+        "role":"ROLE_ADMIN",
+        "score":0
+        }
+    ]
+}
