@@ -23,3 +23,7 @@ define("WEBROOT",str_replace("index.php","",$_SERVER['SCRIPT_NAME']));
 * Chemin sur l'action des formulaires
 */
 define("PATH_POST","http://localhost:81/Quiz-MVC/public/");
+
+
+define("KEY_ERRORS","errors");
+define("KEY_USER_CONNECT","user-connect");

@@ -1,4 +1,8 @@
 <?php
+    if(session_status() == PHP_SESSION_NONE)
+    {
+        session_start();
+    }
     //inclusion des chemins absolus
     require_once dirname(dirname(__FILE__)).'/config/constantes.php';
     //inclusion du Validator
