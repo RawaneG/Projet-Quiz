@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body
+{
+    background-image:url('../img/pic4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content
+{
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    display: flex;    
+    box-shadow: 0px 0px 25px 2px gray;
+}
+.side_image,.register_form
+{
+    width: 50%;
+    height: 100%;
+}
+.side_image
+{
+    background-image: url('../img/pic5.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message_erreur
+{
+    color: white;
+    font-weight: bold;
+    width: 80%;
+    height: 100%;
+    padding: 2%;
+    text-align: center;
+}
+.membre_content
+{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.membre
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.membre a
+{
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(24, 28, 77);
+    padding: 1%;
+    margin-top: 2%;
+    width: 60%;
+    transition: 0.3s ease-in-out;
+}
+.membre a:hover,input[type="submit"]:hover
+{
+    opacity: 0.7;
+}
+.message_content
+{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.register_form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title
+{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form
+{
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form
+{
+    height: 100%;
+}
+input
+{
+    display: block;
+    margin: 6% auto 0 auto;
+    outline: none;
+}
+input[type="text"],input[type="password"]
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+input[type="submit"]
+{
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(24, 28, 77);
+    padding: 2%;
+    margin-top: 10%;
+    width: 60%;
+    transition: 0.3s ease-in-out;
+}

@@ -19,7 +19,6 @@ if($_SERVER['REQUEST_METHOD'] == "GET")
         if(isset($_GET['action']) == 'connexion')
         {
             require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
-
         }
     }
 }
