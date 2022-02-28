@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="<?=WEB_PUBLIC."css".DIRECTORY_SEPARATOR."style.accueil.css";?>">
-    <title>Accueil</title>
-</head>
-<body>
+<?php
+    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
+?>
     <header>
         <ul>
-            <li><a href="">Accueil</a></li>
-            <li><a href="">Utilisateurs</a></li>
-            <li><a href="">Déconnexion</a></li>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Utilisateurs</a></li>
+            <li><a href="#">Déconnexion</a></li>
         </ul>
     </header>
     <section>
 
     </section>
-</body>
-</html>
+<?php
+    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
+?>

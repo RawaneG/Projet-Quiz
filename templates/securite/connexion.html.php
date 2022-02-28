@@ -1,30 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="<?=WEB_PUBLIC."css".DIRECTORY_SEPARATOR."style.connexion.css"?>">
-    <title>Connexion</title>
-</head>
-<body>
+<?php
+    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
+    if(isset($_SESSION[KEY_ERRORS]))
+    {
+        $errors = $_SESSION[KEY_ERRORS];
+        unset($_SESSION[KEY_ERRORS]);
+    }
+?>
     <div class="content">
         <div class="side_image">
             <div class="message_erreur">
                 <div class="membre_content">
                     <div class="membre">
                         <p>Vous n'avez pas encore de compte ? Veuillez donc cliquer ci-dessous  </p>
-                        <a href="">Inscription</a>
+                        <a href="#">Inscription</a>
                     </div>
                 </div>
                 <div class="message_content">
                     <div class="message">
                         <div>
-
+                            <?php 
+                                if(isset($errors['connexion']))
+                                {
+                                    echo $errors['connexion'];
+                                }
+                            ?>
                         </div>
                         <div>   
-
+                            <?php 
+                                if(isset($errors['login']))
+                                {
+                                    echo $errors['login'];
+                                }
+                            ?>  
                         </div>
                         <div>   
-
+                            <?php 
+                                if(isset($errors['password']))
+                                {
+                                    echo $errors['password'];
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -35,7 +50,7 @@
                 <h1>Connexion</h1>
             </div>
             <div class="form">
-            <form action="<?=WEBROOT;?>" method="post">
+            <form action="<?= WEBROOT?>" method="POST">
                 <input type="hidden" name="controller" value="securite">
                 <input type="hidden" name="action" value="connexion">
                 <input type="text" name="login" placeholder="Veuillez entrer votre email">
@@ -45,6 +60,6 @@
             </div>
         </div>
     </div>
-    <script src="<?=WEB_PUBLIC."script".DIRECTORY_SEPARATOR."script.js"?>"></script>
-</body>
-</html>
+<?php
+    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
+?>
