@@ -1,132 +1,160 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
 *
 {
-    margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    margin: 0;
 }
 body
 {
-    background-image:url('../img/pic4.jpg');
+    background:url("../img/bg.jpg");
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-attachment: fixed;   
     height: 100vh;
-    display: flex;
+    font-family: sans-serif;
+}
+body::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #88a8a8;
+    opacity:0.432;
+    z-index: -1;
+}
+.nav
+{
+    z-index: 1;
+    background-color: #052426;
+    color: white;
+    height: 10%;
+    display:flex;
     justify-content: center;
     align-items: center;
 }
-.content
+.mini_container
 {
-    width: 80%;
     height: 90%;
-    background-color: white;
-    display: flex;    
-    box-shadow: 0px 0px 25px 2px gray;
-}
-.side_image,.register_form
-{
-    width: 50%;
-    height: 100%;
-}
-.side_image
-{
-    background-image: url('../img/pic5.jpg');
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.message_erreur
-{
-    color: white;
-    font-weight: bold;
-    width: 80%;
-    height: 100%;
-    padding: 2%;
-    text-align: center;
-}
-.membre_content
-{
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.membre
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.membre a
-{
-    display: block;
-    text-decoration: none;
-    color: white;
-    background-color: rgb(24, 28, 77);
-    padding: 1%;
-    margin-top: 2%;
-    width: 60%;
-    transition: 0.3s ease-in-out;
-}
-.membre a:hover,input[type="submit"]:hover
-{
-    opacity: 0.7;
-}
-.message_content
-{
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.register_form
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.title
-{
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.form
-{
-    height: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 form
 {
-    height: 100%;
+    background-color: white;
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-input
+.login_title
 {
-    display: block;
-    margin: 6% auto 0 auto;
-    outline: none;
+    color: white;
+    background-color: #51bfd0;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-input[type="text"],input[type="password"]
+.login_title h3
 {
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    margin-left: 4%;
 }
-input[type="submit"]
+.login_title button
 {
     border: none;
-    border-radius: 10px;
+    background:none;
     cursor: pointer;
     color: white;
-    background-color: rgb(24, 28, 77);
-    padding: 2%;
-    margin-top: 10%;
-    width: 60%;
-    transition: 0.3s ease-in-out;
+    margin-right: 4%;
 }
+.inputs
+{
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.login
+{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    border: 1px solid rgb(209, 204, 204);
+    background-color: #f0eef1;
+}
+.login input
+{
+    width: 92%;
+    padding: 4%;
+    border: none;
+    outline: none;
+    background-color: #f0eef1;
+
+}
+.password
+{
+    border: 2px solid aquamarine;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    border: 1px solid rgb(209, 204, 204);
+    background-color: #f0eef1;
+}
+.password input
+{
+    width: 92%;
+    padding: 4%;
+    border: none;
+    outline: none;
+    background-color: #f0eef1;
+}
+.submits_container
+{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+.submits
+{
+    display: flex;
+    align-items: flex-start;
+    width: 92%;
+}
+.submits a
+{
+    text-decoration: none;
+    color: gray;
+    padding: 2.5%;
+    border-radius: 6px;
+}
+.submits input[type=submit]
+{
+    padding: 1em;
+    border-radius: 6px;
+    background-color: #51bfd0;
+    color: white;
+    transition: 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+.submits input[type=submit]:hover
+{
+    background-color: #4096a3;
+}
+.submits .inscription
+{
+    margin-left: 4%;
+}
+.submits .inscription:hover
+{
+    border: 1px solid#4096a3;
+}
+.message
+{
+    color: red;
+}
+
