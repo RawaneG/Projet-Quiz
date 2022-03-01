@@ -32,6 +32,10 @@ if($_SERVER['REQUEST_METHOD'] == "GET")
             $password = $_GET['password'];
             connexion($login,$password);
         }
+        elseif($_GET['action'] == 'register')
+        {
+            require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."register.html.php");
+        }
         elseif($_GET['action'] == 'deconnexion')
         {
             logout();
