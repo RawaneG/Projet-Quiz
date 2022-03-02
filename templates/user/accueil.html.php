@@ -36,25 +36,25 @@
                     </div>
                     <div class="bottom">
                             <div class="liste">
-                                <a href="">
+                                <a href="<?=WEBROOT."?controller=user&action=listeJoueur"?>">
                                     <h4>Liste Questions</h4>
                                     <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."liste.png"?>" alt="">
                                 </a>
                             </div>
                             <div class="liste">
-                                <a href="">
+                                <a href="<?=WEBROOT."?controller=user&action=listeJoueur"?>">
                                     <h4>Créer Admin</h4> 
                                     <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."ajout.png"?>" alt="">
                                 </a>
                             </div>                            
                             <div class="liste">
-                                <a href="">
+                                <a href="<?=WEBROOT."?controller=user&action=listeJoueur"?>">
                                     <h4>Liste Joueurs</h4> 
                                     <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."liste.png"?>" alt="">
                                 </a>
                             </div>                            
                             <div class="liste">
-                                <a href="">
+                                <a href="<?=WEBROOT."?controller=user&action=listeJoueur"?>">
                                     <h4>Créer Questions</h4>
                                     <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."ajout.png"?>" alt="">
                                 </a>
