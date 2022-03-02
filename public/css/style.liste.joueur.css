@@ -125,9 +125,24 @@ body::before
     border: 2px solid #38dcd5;
     height: 100%;
     width: 80%;
+}
+.titles
+{
+    height: 10%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     text-align: center;
+}
+table
+{
+    height: 90%;
+    width: 100%;
+    text-align: center;
+}
+td
+{
+    width: 32%;
 }
 .next
 {
@@ -156,13 +171,6 @@ body::before
 .nom,.prenom,.score
 {
     height: 100%;
-}
-.nom,.prenom
-{
-    width: 32%;
-}
-.score
-{
     width: 32%;
 }
 .profile

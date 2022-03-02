@@ -22,6 +22,8 @@
     </div>
     <div class="mini_container">
         <form action="<?=WEBROOT?>" method="post">
+            <input type="hidden" name="controller" value="securite">
+            <input type="hidden" name="action" value="inscription">
             <div class="inscription">
                 <div class="up">
                     <div class="text">
@@ -32,24 +34,64 @@
                 <div class="down">
                     <div class="input">
                         <label for="prenom">Prénom</label>
-                        <input type="text" id="prenom">
+                        <input type="text" id="prenom" name="prenom">
                     </div>
+                    <span class="message">
+                        <?php 
+                            if(isset($errors['prenom']))
+                            {
+                                echo $errors['prenom'];
+                            }
+                        ?>
+                    </span>
                     <div class="input">
                         <label for="">Nom</label>
-                        <input type="text" id="nom">
+                        <input type="text" id="nom" name="nom">
                     </div>
+                    <span class="message">
+                        <?php 
+                            if(isset($errors['nom']))
+                            {
+                                echo $errors['nom'];
+                            }
+                        ?>
+                    </span>
                     <div class="input">
                         <label for="">Login</label>
-                        <input type="text" id="login">
+                        <input type="text" id="login" name="login">
                     </div>
+                    <span class="message">
+                        <?php 
+                            if(isset($errors['login']))
+                            {
+                                echo $errors['login'];
+                            }
+                        ?>
+                    </span>
                     <div class="input">
                         <label for="">Password</label>
-                        <input type="password" id="password">
+                        <input type="password" id="password" name="password">
                     </div>
+                    <span class="message">
+                            <?php 
+                                if(isset($errors['password']))
+                                {
+                                    echo $errors['password'];
+                                }
+                            ?>
+                    </span>
                     <div class="input">
                         <label for="">Confirmer Password</label>
-                        <input type="password" id="c_password">
+                        <input type="password" id="c_password" name="c_password">
                     </div>
+                    <span class="message">
+                        <?php 
+                            if(isset($errors['c_password']))
+                            {
+                                echo $errors['c_password'];
+                            }
+                        ?>
+                    </span>
                     <div class="avatar">
                         <h4>Avatar</h4>
                         <input type="submit" value="Choisir un fichier">

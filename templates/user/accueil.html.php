@@ -32,7 +32,7 @@
                         <div class="image">
                             <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."avatar.jpg"?>" alt="">
                         </div>
-                        <h3>Mbaye Sow Beye Mbelé</h3>
+                        <h3><?= $_SESSION[KEY_USER_CONNECT]['prenom'];?></h3>
                     </div>
                     <div class="bottom">
                             <div class="liste">

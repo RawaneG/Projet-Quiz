@@ -1,8 +1,15 @@
 <?php
+    session_start();
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    
     if(!isset($_SESSION[KEY_USER_CONNECT]))
     {
         header("location :".WEBROOT);
     }
+    $jsonFile = file_get_contents((PATH_DB),true);
+    $old_record = json_decode($jsonFile,true); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +39,7 @@
                         <div class="image">
                             <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."avatar.jpg"?>" alt="">
                         </div>
-                        <h3>Mbaye Sow Beye Mbelé</h3>
+                        <h3><?= $_SESSION[KEY_USER_CONNECT]['prenom'];?></h3>
                     </div>
                     <div class="bottom">
                             <div class="liste">
@@ -68,15 +75,34 @@
                     </div>
                     <div class="joueurs">
                         <div class="joueurs_liste">
-                            <div class="nom">
-                                <h3>Nom</h3>
+                            <div class="titles">
+                                <div class="nom">
+                                    <h3>Nom</h3>
+                                </div>
+                                <div class="prenom">
+                                    <h3>Prénom</h3>
+                                </div>
+                                <div class="score">
+                                    <h3>Score</h3>  
+                                </div>
                             </div>
-                            <div class="prenom">
-                                <h3>Prénom</h3>
-                            </div>
-                            <div class="score">
-                                <h3>Score</h3>                           
-                            </div>
+                            <table> 
+                                <?php 
+                                    foreach($old_record as $row)
+                                    {
+                                        foreach($row as $value)
+                                        {
+                                ?>
+                                <tr>
+                                    <td><?= $value['nom']; ?></td>
+                                    <td><?= $value['prenom'];?></td>
+                                    <td><?= $value['score'];?></td>
+                                </tr>
+                                <?php
+                                        }
+                                    }
+                                ?>
+                            </table>
                         </div>
                     </div>
                     <div class="next">

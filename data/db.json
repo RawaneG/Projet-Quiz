@@ -2,15 +2,81 @@
     "users":
     [
         {
-            "nom_complet":"Rawane",
+            "prenom":"Rawane",
+            "nom" : "Sow",
             "login":"rawane.meissa@gmail.com",
             "password":"rawane10",
             "role":"ROLE_JOUEUR",
             "score":15
         },
         {
-            "nom_complet":"Meissa Sow",
-            "login":"meissa.sow@gmail.com",
+            "prenom":"Meissa",
+            "nom" : "Mbelé",
+            "login":"a.sow@gmail.com",
+            "password":"rawane10",
+            "role":"ROLE_ADMIN",
+            "score":0
+        },
+        {
+            "prenom":"Jiren",
+            "nom" : "Jeager",
+            "login":"b.meissa@gmail.com",
+            "password":"rawane10",
+            "role":"ROLE_JOUEUR",
+            "score":15
+        },
+        {
+            "prenom":"Eren",
+            "nom" : "Uzumaki",
+            "login":"c.sow@gmail.com",
+            "password":"rawane10",
+            "role":"ROLE_ADMIN",
+            "score":0
+        },
+        {
+            "prenom":"Beureukh",
+            "nom" : "Nieulé",
+            "login":"d.meissa@gmail.com",
+            "password":"rawane10",
+            "role":"ROLE_JOUEUR",
+            "score":15
+        },
+        {
+            "prenom":"Aziz",
+            "nom" : "Tombola",
+            "login":"e.sow@gmail.com",
+            "password":"rawane10",
+            "role":"ROLE_ADMIN",
+            "score":0
+        },
+        {
+            "prenom":"Moussa",
+            "nom" : "Tendeng",
+            "login":"f.meissa@gmail.com",
+            "password":"rawane10",
+            "role":"ROLE_JOUEUR",
+            "score":15
+        },
+        {
+            "prenom":"Tening",
+            "nom" : "Tendeng",
+            "login":"g.sow@gmail.com",
+            "password":"rawane10",
+            "role":"ROLE_ADMIN",
+            "score":0
+        },
+        {
+            "prenom":"Soné",
+            "nom" : "Daw",
+            "login":"h.meissa@gmail.com",
+            "password":"rawane10",
+            "role":"ROLE_JOUEUR",
+            "score":15
+        },
+        {
+            "prenom":"Bath",
+            "nom" : "Loméo",
+            "login":"i.sow@gmail.com",
             "password":"rawane10",
             "role":"ROLE_ADMIN",
             "score":0
