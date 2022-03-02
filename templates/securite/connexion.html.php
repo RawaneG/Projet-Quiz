@@ -23,7 +23,10 @@
         <h2>Le plaisir de jouer</h2>
     </div>
     <div class="mini_container">
-        <form action="<?= WEBROOT?>" method="post">
+        <span id="error">
+            
+        </span>
+        <form action="<?= WEBROOT?>" method="post" id="form">
             <input type="hidden" name="controller" value="securite">
             <input type="hidden" name="action" value="connexion">
             <div class="login_title">
@@ -33,24 +36,20 @@
                 </button>
             </div>
             <div class="inputs">
-                <div class="login">
-                    <input type="text" name="login" placeholder="Login">
+                <div class="login" id="login_input">
+                    <input type="text" name="login" placeholder="Login" id="login">
                     <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."login.png";?>" width="24px" alt="photo">
                 </div>
                 <span class="message">
                     <?php 
-                        if(isset($errors['connexion']))
-                        {
-                            echo $errors['connexion'];
-                        }
                         if(isset($errors['login']))
                         {
                             echo $errors['login'];
                         }
                     ?>
                 </span>
-                <div class="password">
-                    <input type="password" name="password" placeholder="Password">
+                <div class="password" id="password_input">
+                    <input type="password" name="password" placeholder="Password" id="password">
                     <i class="material-icons" style="font-size:28px;color:rgb(190, 190, 190);">lock</i>
                 </div>
                 <span class="message">
@@ -59,12 +58,16 @@
                         {
                             echo $errors['password'];
                         }
+                        if(isset($errors['connexion']))
+                        {
+                            echo $errors['connexion'];
+                        }
                     ?>
                 </span>
             </div>
             <div class="submits_container">
                 <div class="submits">
-                    <input type="submit" value="Connexion">
+                    <input type="submit" value="Connexion" id="valider">
                     <a href="<?= WEBROOT."?controller=securite&action=register"?>" 
                     class="inscription">S'inscrire pour jouer ?</a>
                 </div>

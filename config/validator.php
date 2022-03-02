@@ -16,5 +16,8 @@ function valid_email(string $key,string $data,array &$errors,string $message= "C
 function valid_password(string $key,string $data,array &$errors,string $message= "Le mot de passe est 
 incorrect")
 {
-    
+    if(!preg_match("/[a-bA-Z]/",$data) || !preg_match("/[0-9]/", $data) || $data < 6)
+    {
+        $errors[$key] = $message;
+    }
 }
