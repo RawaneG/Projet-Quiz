@@ -86,7 +86,7 @@
                                     <h3>Score</h3>  
                                 </div>
                             </div>
-                            <table> 
+                            <table id="table"> 
                                 <?php 
                                     foreach($old_record as $row)
                                     {
@@ -106,12 +106,13 @@
                         </div>
                     </div>
                     <div class="next">
-                        <button>Suivant</button>
+                        <button id="precedent" class="precedent">Précédent</button>
+                        <button id="suivant">Suivant</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<?php
-    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
-?>
+    <script src="<?= WEBROOT."script".DIRECTORY_SEPARATOR."list.js";?>"></script>
+</body>
+</html>

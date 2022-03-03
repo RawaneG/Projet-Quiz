@@ -1,85 +1,126 @@
 {
-    "users":
-    [
+    "users": [
         {
-            "prenom":"Rawane",
-            "nom" : "Sow",
-            "login":"rawane.meissa@gmail.com",
-            "password":"rawane10",
-            "role":"ROLE_JOUEUR",
-            "score":15
+            "prenom": "Rawane",
+            "nom": "Sow",
+            "login": "rawane.meissa@gmail.com",
+            "password": "rawane10",
+            "role": "ROLE_JOUEUR",
+            "image": "",
+            "score": 15
         },
         {
-            "prenom":"Meissa",
-            "nom" : "Mbelé",
-            "login":"a.sow@gmail.com",
-            "password":"rawane10",
-            "role":"ROLE_ADMIN",
-            "score":0
+            "prenom": "Meissa",
+            "nom": "Mbel\u00e9",
+            "login": "a.sow@gmail.com",
+            "password": "rawane10",
+            "role": "ROLE_ADMIN",
+            "image": "",
+            "score": 0
         },
         {
-            "prenom":"Jiren",
-            "nom" : "Jeager",
-            "login":"b.meissa@gmail.com",
-            "password":"rawane10",
-            "role":"ROLE_JOUEUR",
-            "score":15
+            "prenom": "Jiren",
+            "nom": "Jeager",
+            "login": "b.meissa@gmail.com",
+            "password": "rawane10",
+            "role": "ROLE_JOUEUR",
+            "image": "",
+            "score": 15
         },
         {
-            "prenom":"Eren",
-            "nom" : "Uzumaki",
-            "login":"c.sow@gmail.com",
-            "password":"rawane10",
-            "role":"ROLE_ADMIN",
-            "score":0
+            "prenom": "Eren",
+            "nom": "Uzumaki",
+            "login": "c.sow@gmail.com",
+            "password": "rawane10",
+            "role": "ROLE_ADMIN",
+            "image": "",
+            "score": 0
         },
         {
-            "prenom":"Beureukh",
-            "nom" : "Nieulé",
-            "login":"d.meissa@gmail.com",
-            "password":"rawane10",
-            "role":"ROLE_JOUEUR",
-            "score":15
+            "prenom": "Beureukh",
+            "nom": "Nieul\u00e9",
+            "login": "d.meissa@gmail.com",
+            "password": "rawane10",
+            "role": "ROLE_JOUEUR",
+            "image": "",
+            "score": 15
         },
         {
-            "prenom":"Aziz",
-            "nom" : "Tombola",
-            "login":"e.sow@gmail.com",
-            "password":"rawane10",
-            "role":"ROLE_ADMIN",
-            "score":0
+            "prenom": "Aziz",
+            "nom": "Tombola",
+            "login": "e.sow@gmail.com",
+            "password": "rawane10",
+            "role": "ROLE_ADMIN",
+            "image": "",
+            "score": 0
         },
         {
-            "prenom":"Moussa",
-            "nom" : "Tendeng",
-            "login":"f.meissa@gmail.com",
-            "password":"rawane10",
-            "role":"ROLE_JOUEUR",
-            "score":15
+            "prenom": "Moussa",
+            "nom": "Tendeng",
+            "login": "f.meissa@gmail.com",
+            "password": "rawane10",
+            "role": "ROLE_JOUEUR",
+            "image": "",
+            "score": 15
         },
         {
-            "prenom":"Tening",
-            "nom" : "Tendeng",
-            "login":"g.sow@gmail.com",
-            "password":"rawane10",
-            "role":"ROLE_ADMIN",
-            "score":0
+            "prenom": "Tening",
+            "nom": "Tendeng",
+            "login": "g.sow@gmail.com",
+            "password": "rawane10",
+            "role": "ROLE_ADMIN",
+            "image": "",
+            "score": 0
         },
         {
-            "prenom":"Soné",
-            "nom" : "Daw",
-            "login":"h.meissa@gmail.com",
-            "password":"rawane10",
-            "role":"ROLE_JOUEUR",
-            "score":15
+            "prenom": "Son\u00e9",
+            "nom": "Daw",
+            "login": "h.meissa@gmail.com",
+            "password": "rawane10",
+            "role": "ROLE_JOUEUR",
+            "image": "",
+            "score": 15
         },
         {
-            "prenom":"Bath",
-            "nom" : "Loméo",
-            "login":"i.sow@gmail.com",
-            "password":"rawane10",
-            "role":"ROLE_ADMIN",
-            "score":0
+            "prenom": "Bath",
+            "nom": "Lom\u00e9o",
+            "login": "i.sow@gmail.com",
+            "password": "rawane10",
+            "role": "ROLE_ADMIN",
+            "image": "",
+            "score": 0
+        },
+        {
+            "prenom": "Rawane",
+            "nom": "Sow",
+            "login": "ming@gmail.com",
+            "password": "rawane10",
+            "image": "",
+            "score": 0
+        },
+        {
+            "prenom": "Aly",
+            "nom": "mBEL\u00c9",
+            "login": "Mba@gmail.com",
+            "password": "rawane10",
+            "image": "",
+            "score": 0
+        },
+        {
+            "prenom": "Raz",
+            "nom": "Zar",
+            "login": "Razor@gmail.com",
+            "password": "rawane10",
+            "image": "",
+            "score": 0
+        },
+        {
+            "prenom": "Djiby",
+            "nom": "Ndiaye",
+            "login": "djiby@gmail.com",
+            "password": "rawane10",
+            "image": "",
+            "score": 0
         }
     ]
 }

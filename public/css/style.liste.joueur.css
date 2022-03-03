@@ -149,7 +149,7 @@ td
     width: 64%;
     height: 10%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 }
 .next button
@@ -172,6 +172,10 @@ td
 {
     height: 100%;
     width: 32%;
+}
+.precedent
+{
+    visibility: hidden;
 }
 .profile
 {

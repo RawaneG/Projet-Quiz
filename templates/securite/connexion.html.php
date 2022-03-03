@@ -74,6 +74,6 @@
             </div>
         </form>
     </div>
-<?php
-    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
-?>
+    <script src="<?=WEBROOT."script".DIRECTORY_SEPARATOR."script.js";?>"></script>
+</body>
+</html>

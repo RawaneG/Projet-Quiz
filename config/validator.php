@@ -8,7 +8,7 @@ function champ_obligatoire(string $key,string $data,array &$errors,string $messa
 }
 function valid_email(string $key,string $data,array &$errors,string $message= "Cet email est invalide")
 {
-    if(!filter_var($data,FILTER_VALIDATE_EMAIL))
+    if(!preg_match("/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/",$data))
     {
         $errors[$key] = $message;
     }
@@ -16,7 +16,7 @@ function valid_email(string $key,string $data,array &$errors,string $message= "C
 function valid_password(string $key,string $data,array &$errors,string $message= "Le mot de passe est 
 incorrect")
 {
-    if(!preg_match("/[a-bA-Z]/",$data) || !preg_match("/[0-9]/", $data) || $data < 6)
+    if(!preg_match("/[a-zA-Z]/",$data) || !preg_match("/[0-9]/", $data) || $data < 6)
     {
         $errors[$key] = $message;
     }

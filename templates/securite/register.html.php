@@ -21,7 +21,7 @@
         <h2>Le plaisir de jouer</h2>
     </div>
     <div class="mini_container">
-        <form action="<?=WEBROOT?>" method="post">
+        <form method="post" enctype="multipart/form-data">
             <input type="hidden" name="controller" value="securite">
             <input type="hidden" name="action" value="inscription">
             <div class="inscription">
@@ -94,8 +94,17 @@
                     </span>
                     <div class="avatar">
                         <h4>Avatar</h4>
-                        <input type="submit" value="Choisir un fichier">
+                        <label for="avatar" class="label">Choisir un fichier</label>
+                        <input type="file" name="avatar" id="avatar" value="Choisir un fichier">
                     </div>
+                        <span class="message">
+                            <?php 
+                                if(isset($errors['avatar']))
+                                {
+                                    echo $errors['avatar'];
+                                }
+                            ?>
+                        </span>
                     <input type="submit" value="Créer un compte">
                 </div>
             </div>
@@ -109,6 +118,5 @@
             </div>
         </form>
     </div>
-<?php
-    require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
-?>
+</body>
+</html>

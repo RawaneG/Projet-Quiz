@@ -20,7 +20,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             $login = $_POST['login'];
             $password = $_POST['password'];
             $c_password = $_POST['c_password'];
-            inscription($name,$prename,$login,$password,$c_password);
+            $avatar = $_FILES['avatar'];
+            inscription($name,$prename,$login,$password,$c_password,$avatar);
         }
     }
     else
@@ -40,15 +41,6 @@ if($_SERVER['REQUEST_METHOD'] == "GET")
             $login = $_GET['login'];
             $password = $_GET['password'];
             connexion($login,$password);
-        }
-        else if($_GET['action'] == 'inscription')
-        {
-            $name = $_POST['nom'];  
-            $prename = $_POST['prenom'];
-            $login = $_POST['login'];
-            $password = $_POST['password'];
-            $c_password = $_POST['c_password'];
-            inscription($name,$prename,$login,$password,$c_password);
         }
         elseif($_GET['action'] == 'register')
         {
@@ -70,38 +62,53 @@ function inscription(string $name, string $prename,string $login, string $passwo
 {
     $errors = [];
 
-    champ_obligatoire("nom",$name,$errors);
-    champ_obligatoire("prenom",$prename,$errors);
-    champ_obligatoire("login",$login,$errors);
-    champ_obligatoire("password",$password,$errors);
-    champ_obligatoire("c_password",$c_password,$errors);
-    if(!isset($errors['login']))
+    champ_obligatoire("nom",$name,$errors,"Le nom est requis"); 
+    champ_obligatoire("prenom",$prename,$errors,"Le prénom est requis");
+    champ_obligatoire("login",$login,$errors,"L'email est requis");
+    champ_obligatoire("password",$password,$errors,"Le mot de passe est requis");
+    champ_obligatoire("c_password",$c_password,$errors,"La confirmation est requise");
+
+    if($password != $c_password)
     {
-        valid_email("login",$login,$errors);
-    }
-    if(!isset($errors['password']))
-    {
-        valid_password("password",$password,$errors);
+        $errors['password'] = "Les mots de passe ne sont pas identiques";
+        $_SESSION[KEY_ERRORS] = $errors; 
+        header('location:'.WEBROOT.'?controller=securite&action=register');
+        exit();
     }
     if(count($errors) == 0)
     {
         $userConnect = find_user_login_password($login , $password);
-        if(count($userConnect)!= 0)
+        if(count($userConnect) != 0)
         {
-            $errors['connexion'] = "Cet email existe déjà.";
+            $errors['login'] = "Cet email existe déjà, Veuillez vous connecter";
             $_SESSION[KEY_ERRORS] = $errors;
-            header("location:".WEBROOT);
+            header('location:'.WEBROOT.'?controller=securite&action=register');
             exit();
         }
         else
         {
-            
+            if(file_exists(PATH_DB))  
+            {  
+                $current_data = file_get_contents(PATH_DB); 
+                $array_data = json_decode($current_data, true); 
+                $extra = 
+                [                      
+                    'prenom' => $prename,  
+                    'nom' => $name,  
+                    'login' => $login ,
+                    'password' => $password
+                ];
+                $array_data['users'][] = $extra;  
+                $final_data = json_encode($array_data,JSON_PRETTY_PRINT);    
+                file_put_contents(PATH_DB, $final_data,true);  
+                header('location:'.WEBROOT);
+            }  
         }
     }
     else
     {
         $_SESSION[KEY_ERRORS] = $errors;
-        header("location:".WEBROOT);
+        header("location:".WEBROOT."?controller=securite&action=register");
         exit();
     }
 

@@ -8,9 +8,9 @@ function is_connect():bool
 }
 function is_joueur():bool
 {
-    return is_connect() && $_SESSION[USER_KEY]['role']==ROLE_JOUEUR;
+    return is_connect() && $_SESSION[USER_KEY]['role'] == ROLE_JOUEUR;
 }
 function is_admin():bool
 {
-    return is_connect() && $_SESSION[USER_KEY]['role']==ROLE_ADMIN;
+    return is_connect() && $_SESSION[USER_KEY]['role'] == ROLE_ADMIN;
 }
