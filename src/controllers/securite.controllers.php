@@ -96,7 +96,10 @@ function inscription(string $name, string $prename,string $login, string $passwo
                     'prenom' => $prename,  
                     'nom' => $name,  
                     'login' => $login ,
-                    'password' => $password
+                    'password' => $password,
+                    'image' => '',
+                    'role' => "ROLE_JOUEUR",
+                    'score' => 0
                 ];
                 $array_data['users'][] = $extra;  
                 $final_data = json_encode($array_data,JSON_PRETTY_PRINT);    
@@ -126,7 +129,7 @@ function inscription(string $name, string $prename,string $login, string $passwo
     }
     champ_obligatoire("password",$password,$errors);
 
-    if(!isset($errors['login']))
+    if(!isset($errors['password']))
     {
         valid_password("password",$password,$errors);
     }
@@ -136,8 +139,16 @@ function inscription(string $name, string $prename,string $login, string $passwo
         if(count($userConnect)!= 0)
         {
             $_SESSION[KEY_USER_CONNECT] = $userConnect;
-            header("location:".WEBROOT."?controller=user&action=accueil");
-            exit();
+            if(!is_joueur())
+            {
+                header("location:".WEBROOT."?controller=user&action=accueil");
+                exit();
+            }
+            else
+            {
+                header("location:".WEBROOT."?controller=user&action=joueurAccueil");
+                exit();
+            }
         }
         else
         {
@@ -154,6 +165,7 @@ function inscription(string $name, string $prename,string $login, string $passwo
         exit();
     }
 }
+
 function logout():void
 {
     $_SESSION[KEY_USER_CONNECT] = array();

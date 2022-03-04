@@ -41,11 +41,10 @@ body::before
     left: 2%;
     top: 0;
 }
-.mini_container
+#mini_container
 {
     height: 90%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 .user

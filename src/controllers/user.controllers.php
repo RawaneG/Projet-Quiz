@@ -21,5 +21,13 @@ if($_SERVER['REQUEST_METHOD'] == "GET")
         {
             require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."liste.joueur.html.php");
         }
+        else if(($_GET['action']) == 'joueurAccueil')
+        {
+            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.joueur.html.php");
+        }
+    }
+    else
+    {
+        echo "Qu'est-ce que vous faites là ?";
     }
 }

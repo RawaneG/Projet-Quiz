@@ -1,51 +1,6 @@
 {
     "users": [
         {
-            "prenom": "Rawane",
-            "nom": "Sow",
-            "login": "rawane.meissa@gmail.com",
-            "password": "rawane10",
-            "role": "ROLE_JOUEUR",
-            "image": "",
-            "score": 15
-        },
-        {
-            "prenom": "Meissa",
-            "nom": "Mbel\u00e9",
-            "login": "a.sow@gmail.com",
-            "password": "rawane10",
-            "role": "ROLE_ADMIN",
-            "image": "",
-            "score": 0
-        },
-        {
-            "prenom": "Jiren",
-            "nom": "Jeager",
-            "login": "b.meissa@gmail.com",
-            "password": "rawane10",
-            "role": "ROLE_JOUEUR",
-            "image": "",
-            "score": 15
-        },
-        {
-            "prenom": "Eren",
-            "nom": "Uzumaki",
-            "login": "c.sow@gmail.com",
-            "password": "rawane10",
-            "role": "ROLE_ADMIN",
-            "image": "",
-            "score": 0
-        },
-        {
-            "prenom": "Beureukh",
-            "nom": "Nieul\u00e9",
-            "login": "d.meissa@gmail.com",
-            "password": "rawane10",
-            "role": "ROLE_JOUEUR",
-            "image": "",
-            "score": 15
-        },
-        {
             "prenom": "Aziz",
             "nom": "Tombola",
             "login": "e.sow@gmail.com",
@@ -120,6 +75,15 @@
             "login": "djiby@gmail.com",
             "password": "rawane10",
             "image": "",
+            "score": 0
+        },
+        {
+            "prenom": "Rawane",
+            "nom": "Sow",
+            "login": "rawane.meissa@gmail.com",
+            "password": "rawane10",
+            "image": "",
+            "role": "ROLE_JOUEUR",
             "score": 0
         }
     ]

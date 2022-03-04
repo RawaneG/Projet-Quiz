@@ -1,5 +1,4 @@
 <?php
-    // require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
     if(isset($_SESSION[KEY_ERRORS]))
     {
         $errors = $_SESSION[KEY_ERRORS];
@@ -22,10 +21,8 @@
         <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."logo.png"?>" alt="">
         <h2>Le plaisir de jouer</h2>
     </div>
+    
     <div class="mini_container">
-        <span id="error">
-            
-        </span>
         <form action="<?= WEBROOT?>" method="post" id="form">
             <input type="hidden" name="controller" value="securite">
             <input type="hidden" name="action" value="connexion">
@@ -40,7 +37,7 @@
                     <input type="text" name="login" placeholder="Login" id="login">
                     <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."login.png";?>" width="24px" alt="photo">
                 </div>
-                <span class="message">
+                <span class="message" id="loginErr">
                     <?php 
                         if(isset($errors['login']))
                         {
@@ -52,7 +49,7 @@
                     <input type="password" name="password" placeholder="Password" id="password">
                     <i class="material-icons" style="font-size:28px;color:rgb(190, 190, 190);">lock</i>
                 </div>
-                <span class="message">
+                <span class="message" id="passwdErr">
                     <?php 
                         if(isset($errors['password']))
                         {

@@ -125,6 +125,7 @@ body::before
     border: 2px solid #38dcd5;
     height: 100%;
     width: 80%;
+    color: black;
 }
 .titles
 {
@@ -193,6 +194,7 @@ td
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    color: black;
 }
 .image
 {
