@@ -11,3 +11,15 @@ function find_user_login_password(string $login,string $password):array
     }
     return [];
 }
+function find_user_login(string $login):array
+{
+    $users = find_data("users");
+    foreach ($users as $user) 
+    {
+        if($user['login'] == $login)
+        {
+            return $user;
+        }
+    }
+    return [];
+}

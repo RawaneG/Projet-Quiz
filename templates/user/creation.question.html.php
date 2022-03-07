@@ -28,60 +28,54 @@
                                 </a>
                             </div>                            
                             <div class="liste">
-                                <a href="<?=WEBROOT."?controller=user&action=listeJoueur"?>" class="active" >
+                                <a href="<?=WEBROOT."?controller=user&action=listeJoueur"?>" >
                                     <h4>Liste Joueurs</h4> 
-                                    <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."liste_active.png"?>" alt="">
+                                    <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."liste.png"?>" alt="">
                                 </a>
                             </div>                            
                             <div class="liste">
-                                <a href="<?=WEBROOT."?controller=user&action=creerQuestion"?>">
+                                <a href="<?=WEBROOT."?controller=user&action=creerQuestion"?>" class="active">
                                     <h4>Créer Questions</h4>
-                                    <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."ajout.png"?>" alt="">
+                                    <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."ajout_active.png"?>" alt="">
                                 </a>
                             </div>
                         </ul>
                     </div>
                 </div>
+                                            <!-- Second Part of the Page -->
                 <div class="main">
                     <div class="title_joueurs">
-                        <h2>LISTE DES JOUEURS PAR SCORE</h2>
+                        <h2>PARAMÉTREZ VOTRE QUESTION</h2>
                     </div>
-                    <div class="joueurs">
-                        <div class="joueurs_liste">
-                            <div class="titles">
-                                <div class="nom">
-                                    <h3>Nom</h3>
-                                </div>
-                                <div class="prenom">
-                                    <h3>Prénom</h3>
-                                </div>
-                                <div class="score">
-                                    <h3>Score</h3>  
-                                </div>
+                    <form class="question_sections">
+                        <div class="first_bloc">
+                            <div class="question">
+                                <label for="">Questions</label>
+                                <textarea name="" id="" rows="4"></textarea>
+                            </div>  
+                            <div class="points">
+                                <label for="">Nbre de points</label>
+                                <input type="number">
                             </div>
-                            <table id="table"> 
-                                <?php 
-                                    foreach($old_record as $row)
-                                    {
-                                        foreach($row as $value)
-                                        {
-                                ?>
-                                <tr>
-                                    <td><?= $value['nom']; ?></td>
-                                    <td><?= $value['prenom'];?></td>
-                                    <td><?= $value['score'];?></td>
-                                </tr>
-                                <?php
-                                        }
-                                    }
-                                ?>
-                            </table>
+                            <div class="type_reponse">
+                                <label for="">Type de réponse</label>
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                                <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."ajout_reponse.png  "?>" alt="">
+                            </div>
+                            <div class="reponse">
+                                <label for="">Réponse</label>
+                                <input type="text">
+                                <input type="checkbox">
+                                <input type="radio">
+                                <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."supprimer.png  "?>" alt="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="next">
-                        <button id="precedent" class="precedent">Précédent</button>
-                        <button id="suivant">Suivant</button>
-                    </div>
+                        <div class="button">
+                        <button>Enregistrer</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

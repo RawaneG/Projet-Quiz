@@ -85,6 +85,33 @@
             "image": "",
             "role": "ROLE_JOUEUR",
             "score": 0
+        },
+        {
+            "prenom": "Djily",
+            "nom": "aly",
+            "login": "rey@gmail.com",
+            "password": "rawane10",
+            "image": "",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "Rawane",
+            "nom": "Sow",
+            "login": "rawane.meissa@gmail.co",
+            "password": "rawane10",
+            "image": "",
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "aly",
+            "nom": "ipass",
+            "login": "n.meissa@gmail.com",
+            "password": "rawane10",
+            "image": "",
+            "role": "ROLE_JOUEUR",
+            "score": 0
         }
     ]
 }

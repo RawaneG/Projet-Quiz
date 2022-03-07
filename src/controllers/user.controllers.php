@@ -25,6 +25,14 @@ if($_SERVER['REQUEST_METHOD'] == "GET")
         {
             require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.joueur.html.php");
         }
+        else if(($_GET['action']) == 'creerQuestion')
+        {
+            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."creation.question.html.php");
+        }
+        else if(($_GET['action']) == 'createAdmin')
+        {
+            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."creation.admin.html.php");
+        }
     }
     else
     {

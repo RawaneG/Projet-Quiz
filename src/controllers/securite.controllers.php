@@ -77,7 +77,8 @@ function inscription(string $name, string $prename,string $login, string $passwo
     }
     if(count($errors) == 0)
     {
-        $userConnect = find_user_login_password($login , $password);
+        $userConnect = find_user_login($login);
+        
         if(count($userConnect) != 0)
         {
             $errors['login'] = "Cet email existe déjà, Veuillez vous connecter";
@@ -110,6 +111,14 @@ function inscription(string $name, string $prename,string $login, string $passwo
     }
     else
     {
+        $userConnect = find_user_login($login);
+        if(count($userConnect) != 0)
+        {
+            $errors['login'] = "Cet email existe déjà, Veuillez vous connecter";
+            $_SESSION[KEY_ERRORS] = $errors;
+            header('location:'.WEBROOT.'?controller=securite&action=register');
+            exit();
+        }
         $_SESSION[KEY_ERRORS] = $errors;
         header("location:".WEBROOT."?controller=securite&action=register");
         exit();

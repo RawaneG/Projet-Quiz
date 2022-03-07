@@ -7,6 +7,37 @@ const passwordInput = document.getElementById('password_input');
 const loginError =  document.getElementById('loginErr');
 const passwdError = document.getElementById('passwdErr');
 
+loginInput.addEventListener('input', () => 
+{
+    if(login.value === '' || login.value  == null)
+    {
+        loginInput.style.border = "2px solid red";
+    }
+    else if(!login.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g))
+    {
+        loginInput.style.border = "2px solid red";
+    }
+    else
+    {
+        loginInput.style.border = "2px solid green";
+    }
+})
+
+passwordInput.addEventListener('input', () => 
+{
+    if(password.value === '' || password.value  == null)
+    {
+        passwordInput.style.border = "2px solid red";
+    }
+    else if(!password.value.match(/[a-zA-Z]/) || !password.value.match(/[0-9]/) || password.value < 6)
+    {
+        passwordInput.style.border = "2px solid red";
+    }
+    else
+    {
+        passwordInput.style.border = "2px solid green";
+    }
+})
 
 form.addEventListener('submit', (e) => {
     let loginErr = [];
@@ -36,14 +67,14 @@ form.addEventListener('submit', (e) => {
     if(loginErr.length > 0)
     {
         e.preventDefault();
-        loginError.classList.add("error");
-        loginError.innerText = loginErr.join('.\n');
+        loginError.classList.add("error");  
+        loginError.innerText = loginErr;
     }
     if(passwdErr.length > 0)
     {
         e.preventDefault();
         passwdError.classList.add("error");
-        passwdError.innerText = passwdErr.join('.\n');
+        passwdError.innerText = passwdErr;
     }
 })
 
