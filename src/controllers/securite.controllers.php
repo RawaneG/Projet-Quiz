@@ -7,8 +7,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 {
     if(isset($_POST['action']))
     {
+
         if($_POST['action'] == 'connexion')
         {
+
             $login = $_POST['login'];
             $password = $_POST['password'];
             connexion($login,$password);
@@ -20,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             $login = $_POST['login'];
             $password = $_POST['password'];
             $c_password = $_POST['c_password'];
-            $avatar = $_FILES['avatar'];
+            $avatar = $_FILES['avatar'];  
             inscription($name,$prename,$login,$password,$c_password,$avatar);
         }
     }
@@ -58,8 +60,10 @@ if($_SERVER['REQUEST_METHOD'] == "GET")
 }
 
 
-function inscription(string $name, string $prename,string $login, string $password, string $c_password):void
+function inscription(string $name, string $prename,string $login, string $password, string $c_password,
+string | array $avatar):void
 {
+
     $errors = [];
 
     champ_obligatoire("nom",$name,$errors,"Le nom est requis"); 
@@ -67,7 +71,19 @@ function inscription(string $name, string $prename,string $login, string $passwo
     champ_obligatoire("login",$login,$errors,"L'email est requis");
     champ_obligatoire("password",$password,$errors,"Le mot de passe est requis");
     champ_obligatoire("c_password",$c_password,$errors,"La confirmation est requise");
+    champ_obligatoire("avatar",$avatar,$errors,"Veuillez rentrer une image");
 
+    if(!isset($errors['login']))
+    {
+        valid_email("login",$login,$errors);
+    }
+    champ_obligatoire("password",$password,$errors);
+
+    if(!isset($errors['password']))
+    {
+        valid_password("password",$password,$errors);
+    }
+    
     if($password != $c_password)
     {
         $errors['password'] = "Les mots de passe ne sont pas identiques";
@@ -77,6 +93,7 @@ function inscription(string $name, string $prename,string $login, string $passwo
     }
     if(count($errors) == 0)
     {
+
         $userConnect = find_user_login($login);
         
         if(count($userConnect) != 0)
@@ -98,10 +115,12 @@ function inscription(string $name, string $prename,string $login, string $passwo
                     'nom' => $name,  
                     'login' => $login ,
                     'password' => $password,
-                    'image' => '',
+                    'image' => $avatar,
                     'role' => "ROLE_JOUEUR",
                     'score' => 0
                 ];
+                $folder = ROOT."public/uploads/".$avatar['name'];
+                move_uploaded_file($avatar['tmp_name'], $folder);
                 $array_data['users'][] = $extra;  
                 $final_data = json_encode($array_data,JSON_PRETTY_PRINT);    
                 file_put_contents(PATH_DB, $final_data,true);  
@@ -111,6 +130,7 @@ function inscription(string $name, string $prename,string $login, string $passwo
     }
     else
     {
+
         $userConnect = find_user_login($login);
         if(count($userConnect) != 0)
         {
@@ -128,6 +148,7 @@ function inscription(string $name, string $prename,string $login, string $passwo
 
  function connexion(string $login,string $password):void 
  {
+
     $errors = [];
 
     champ_obligatoire("login",$login,$errors);
@@ -144,8 +165,9 @@ function inscription(string $name, string $prename,string $login, string $passwo
     }
     if(count($errors) == 0)
     {
+
         $userConnect = find_user_login_password($login , $password);
-        if(count($userConnect)!= 0)
+        if(count($userConnect) != 0)
         {
             $_SESSION[KEY_USER_CONNECT] = $userConnect;
             if(!is_joueur())

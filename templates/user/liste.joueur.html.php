@@ -3,14 +3,14 @@
 ?>
     <div class="user">
             <div class="title">
-                <h2>CRÉER ET PARAMÉTRER VOS QUIZZ</h2>
+                <h2>CRÉER ET PARAMÉTRER VOS QUIZZ</h2>  
                 <a href="<?= WEBROOT."?controller=securite&action=deconnexion"?>">Déconnexion</a>
             </div>
             <div class="content">
                 <div class="profile">   
                     <div class="head">
                         <div class="image">
-                            <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."avatar.jpg"?>" alt="">
+                            <img src="<?= WEBROOT."uploads/".$_SESSION[KEY_USER_CONNECT]['image']['name']?>" alt="">
                         </div>
                         <h3><?= $_SESSION[KEY_USER_CONNECT]['prenom'];?></h3>
                     </div>

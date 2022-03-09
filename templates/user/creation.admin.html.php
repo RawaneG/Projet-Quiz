@@ -1,5 +1,10 @@
 <?php    
     require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
+    if(isset($_SESSION[KEY_ERRORS]))
+    {
+        $errors = $_SESSION[KEY_ERRORS];
+        unset($_SESSION[KEY_ERRORS]);
+    }
 ?>
     <div class="user">
             <div class="title">
@@ -10,7 +15,7 @@
                 <div class="profile">   
                     <div class="head">
                         <div class="image">
-                            <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."avatar.jpg"?>" alt="">
+                            <img src="<?= WEBROOT."uploads/".$_SESSION[KEY_USER_CONNECT]['image']['name']?>" alt="">
                         </div>
                         <h3><?= $_SESSION[KEY_USER_CONNECT]['prenom'];?></h3>
                     </div>
@@ -44,9 +49,9 @@
                 </div>
                                             <!-- Second Part of the Page -->
                 <div class="main">
-                <form method="post" enctype="multipart/form-data" id="form">
-            <input type="hidden" name="controller" value="securite">
-            <input type="hidden" name="action" value="inscription">
+                <form action="<?=WEBROOT?>" method="post" enctype="multipart/form-data" id="form">
+            <input type="hidden" name="controller" value="user">
+            <input type="hidden" name="action" value="admin">
             <div class="inscription">
                 <div class="up">
                     <div class="text">
@@ -115,11 +120,7 @@
                             }
                         ?>
                     </span>
-                    <div class="avatar" id ="avatar">
-                        <h4>Avatar</h4>
-                        <label for="avatar" class="label">Choisir un fichier</label>
-                        <input type="file" name="avatar" id="avatarInput" value="Choisir un fichier">
-                    </div>
+
                         <span class="message">
                             <?php 
                                 if(isset($errors['avatar']))
@@ -128,12 +129,15 @@
                                 }
                             ?>
                         </span>
-                    <input type="submit" value="Créer un compte" id="submit">
+                    <input type="submit" value="Créer un compte" id="submit" onclick="success();">
                 </div>
             </div>
             <div class="profil">
                 <div class="image_profile">
-                    <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."avatar.jpg"?>" alt="">
+                        <label for="avatarInput" class="label">
+                            <img src=" " alt="" id="img">
+                        </label>
+                        <input type="file" name="avatar" id="avatarInput" value="Choisir un fichier" onchange="load(this)">
                 </div>
                 <div class="title_avatar">
                     <h4>Avatar du Joueur</h4>

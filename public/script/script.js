@@ -7,6 +7,18 @@ const passwordInput = document.getElementById('password_input');
 const loginError =  document.getElementById('loginErr');
 const passwdError = document.getElementById('passwdErr');
 
+function valid_password(input) 
+{
+    if(!input.value.match(/^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%^&*]{6,}$/)) 
+    {
+        return true;
+    }
+    else 
+    {
+        return false;
+    }
+}
+
 loginInput.addEventListener('input', () => 
 {
     if(login.value === '' || login.value  == null)
@@ -29,7 +41,7 @@ passwordInput.addEventListener('input', () =>
     {
         passwordInput.style.border = "2px solid red";
     }
-    else if(!password.value.match(/[a-zA-Z]/) || !password.value.match(/[0-9]/) || password.value < 6)
+    else if(valid_password(password))
     {
         passwordInput.style.border = "2px solid red";
     }
@@ -53,17 +65,22 @@ form.addEventListener('submit', (e) => {
         loginErr.push('Veuillez entrer un email valide');
         loginInput.style.border = "2px solid red";
     }
+
     if(password.value === '' || password.value  == null)
     {
         passwdErr.push('Veuillez remplir votre mot de passe');
         passwordInput.style.border = "2px solid red";
     }
-    else if(!password.value.match(/[a-bA-Z]/) || !password.value.match(/[0-9]/) || password.value < 6)
+    else if(valid_password(password))
     {
-        passwdErr.push("Veuillez rentrer un mot de passe supérieur à 6 caractères et contenant au moins\
-        une lettre et un chiffre");
         passwordInput.style.border = "2px solid red";
+        passwdErr.push("Veuillez rentrer un mot de passe supérieur à 6 caractères");
     }
+    else
+    {
+        passwordInput.style.border = "2px solid green";
+    }
+
     if(loginErr.length > 0)
     {
         e.preventDefault();

@@ -1,5 +1,5 @@
 <?php
-function champ_obligatoire(string $key,string $data,array &$errors,string $message= "ce champ est obligatoire")
+function champ_obligatoire(string $key,string | array $data,array &$errors,string $message= "ce champ est obligatoire")
 {
     if(empty($data))
     {
@@ -16,7 +16,7 @@ function valid_email(string $key,string $data,array &$errors,string $message= "C
 function valid_password(string $key,string $data,array &$errors,string $message= "Le mot de passe est 
 incorrect")
 {
-    if(!preg_match("/[a-zA-Z]/",$data) || !preg_match("/[0-9]/", $data) || $data < 6)
+    if(!preg_match('/^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%^&*]{6,}$/',$data))
     {
         $errors[$key] = $message;
     }

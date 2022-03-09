@@ -15,6 +15,24 @@ const c_mdpInput = document.getElementById("c_mdpInput");
 const avatarInput = document.getElementById("avatarInput");
 const inputs = document.querySelectorAll(".inpute");
 
+function load(photo) {
+
+    const img = document.getElementById('img')
+    img.src = window.URL.createObjectURL(photo.files[0]);
+}
+
+function valid_password(input) 
+{
+    if(!input.value.match(/^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9!@#$%^&*]{6,}$/)) 
+    {
+        return true;
+    }
+    else 
+    {
+        return false;
+    }
+}
+
 function disabled(e)
 {
     e.disabled = true;
@@ -25,6 +43,8 @@ function enable(e)
     e.disabled = false;
     e.style.pointerEvents = "";
 }
+
+disabled(submit);
 
 function valid_name(e)
 {
@@ -60,40 +80,44 @@ email.addEventListener('input',()=>
     else
     {
         emailInput.style.border = "3px solid green";
+        mdp.addEventListener('input',()=>
+        {
+
+            if(mdpInput.value === '' || mdpInput.value  == null)
+            {
+                mdpInput.style.border = "3px solid red";
+            }
+            else if(valid_password(mdpInput))
+            {
+                mdpInput.style.border = "3px solid red";
+            }
+            else
+            {
+                mdpInput.style.border = "3px solid green";
+                c_mdp.addEventListener('input',()=>
+                {
+
+                    if(c_mdpInput.value === '' || c_mdpInput.value  == null)
+                    {
+                        c_mdpInput.style.border = "3px solid red";
+                    }
+                    else if(mdpInput.value != c_mdpInput.value)
+                    {
+                        c_mdpInput.style.border = "3px solid red";
+                    }
+                    else
+                    {
+                        c_mdpInput.style.border = "3px solid green";
+                        enable(submit);
+                    }
+                });
+            }
+        });
     }
 });
 
-mdp.addEventListener('input',()=>
+
+function success()
 {
-
-    if(mdpInput.value === '' || mdpInput.value  == null)
-    {
-        mdpInput.style.border = "3px solid red";
-    }
-    else if(!mdpInput.value.match(/[a-zA-Z]/) || !mdpInput.value.match(/[0-9]/) || mdpInput.value < 6)
-    {
-        mdpInput.style.border = "3px solid red";
-    }
-    else
-    {
-        mdpInput.style.border = "3px solid green";
-    }
-});
-
-c_mdp.addEventListener('input',()=>
-{
-
-    if(c_mdpInput.value === '' || c_mdpInput.value  == null)
-    {
-        c_mdpInput.style.border = "3px solid red";
-    }
-    else if(mdpInput.value != c_mdpInput.value)
-    {
-        c_mdpInput.style.border = "3px solid red";
-    }
-    else
-    {
-        c_mdpInput.style.border = "3px solid green";
-    }
-});
-
+    alert('Un administrateur a été crée avec succès');
+}

@@ -91,11 +91,6 @@
                             }
                         ?>
                     </span>
-                    <div class="avatar" id ="avatar">
-                        <h4>Avatar</h4>
-                        <label for="avatar" class="label">Choisir un fichier</label>
-                        <input type="file" name="avatar" id="avatarInput" value="Choisir un fichier">
-                    </div>
                         <span class="message">
                             <?php 
                                 if(isset($errors['avatar']))
@@ -109,7 +104,10 @@
             </div>
             <div class="profil">
                 <div class="image">
-                    <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."avatar.jpg"?>" alt="">
+                    <label for="avatarInput" class="label">
+                        <img src="" id="img">
+                    </label>
+                    <input type="file" name="avatar" id="avatarInput" value="Choisir un fichier" onchange="load(this)">
                 </div>
                 <div class="title">
                     <h4>Avatar du Joueur</h4>
