@@ -10,18 +10,17 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
         if($_POST['action'] == 'connexion')
         {
-
             $login = $_POST['login'];
             $password = $_POST['password'];
             connexion($login,$password);
         }
         else if($_POST['action'] == 'inscription')
         {
-            $name = $_POST['nom'];
-            $prename = $_POST['prenom'];
-            $login = $_POST['login'];
-            $password = $_POST['password'];
-            $c_password = $_POST['c_password'];
+            $name = correct($_POST['nom']);
+            $prename = correct($_POST['prenom']);
+            $login = correct($_POST['login']);
+            $password = correct($_POST['password']);
+            $c_password = correct($_POST['c_password']);
             $avatar = $_FILES['avatar'];  
             $avatar['name'] = $login;
             inscription($name,$prename,$login,$password,$c_password,$avatar);

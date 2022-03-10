@@ -8,7 +8,7 @@ function champ_obligatoire(string $key,string | array $data,array &$errors,strin
 }
 function valid_email(string $key,string $data,array &$errors,string $message= "Cet email est invalide")
 {
-    if(!preg_match("/[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}/",$data))
+    if(!preg_match("/[-0-9a-zA-Z.+_]+@(gmail)+.(com)/",$data))
     {
         $errors[$key] = $message;
     }
@@ -20,4 +20,11 @@ incorrect")
     {
         $errors[$key] = $message;
     }
+}
+function correct(string | array $element)
+{
+    $element = htmlspecialchars($element);
+    $element = trim($element);
+    $element = stripslashes($element);
+    return $element;
 }

@@ -7,11 +7,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     {
         if($_POST['action'] == 'admin')
         {
-            $name = $_POST['nom'];
-            $prename = $_POST['prenom'];
-            $login = $_POST['login'];
-            $password = $_POST['password'];
-            $c_password = $_POST['c_password'];
+            $name = correct($_POST['nom']);
+            $prename = correct($_POST['prenom']);
+            $login = correct($_POST['login']);
+            $password = correct($_POST['password']);
+            $c_password = correct($_POST['c_password']);
             $avatar = $_FILES['avatar'];
             $avatar['name'] = $login;
             inscription($name,$prename,$login,$password,$c_password,$avatar);
@@ -116,9 +116,9 @@ if($_SERVER['REQUEST_METHOD'] == "GET")
         {
             require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."creation.admin.html.php");
         }
-    }
-    else
-    {
-        echo "Qu'est-ce que vous faites là ?";
-    }
+        else
+        {
+            require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php");
+        }
+    }   
 }

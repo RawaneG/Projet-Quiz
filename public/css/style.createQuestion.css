@@ -135,10 +135,11 @@ body::before
 }
 .first_bloc
 {
-    height: 65%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: auto;
 }
 .question
 {
@@ -146,9 +147,10 @@ body::before
     align-items: center;
     justify-content: space-evenly;
 }
-.question textarea
+.question input
 {
     width: 80%;  
+    padding: 5%;
 }
 .points
 {
@@ -212,4 +214,7 @@ body::before
     cursor: pointer;
     margin-right: 2%;
 }
-
+#ajoutCheck,#ajoutRadio
+{
+    display: none;
+}

@@ -47,29 +47,30 @@
                     <div class="title_joueurs">
                         <h2>PARAMÉTREZ VOTRE QUESTION</h2>
                     </div>
-                    <form class="question_sections">
-                        <div class="first_bloc">
+                    <form class="question_sections" action="<?=WEBROOT?>" method="post">
+                    <input type="hidden" name="controller" value="question">
+                    <input type="hidden" name="action" value="ask">
+                        <div class="first_bloc" id="first_bloc">
                             <div class="question">
                                 <label for="">Questions</label>
-                                <textarea name="" id="" rows="4"></textarea>
+                                <input type="text" name="question"></input>
                             </div>  
                             <div class="points">
                                 <label for="">Nbre de points</label>
-                                <input type="number">
+                                <input type="number" min = "1" name="nbrePoints">
                             </div>
                             <div class="type_reponse">
                                 <label for="">Type de réponse</label>
-                                <select name="" id="">
-                                    <option value=""></option>
+                                <select name="selection" id="selection" onchange="change();">
+                                    <option>Veuillez choisir le type de réponse</option>
+                                    <option value="1">Choix Simple</option>
+                                    <option value="2">Choix Multiple</option>
+                                    <option value="3">Texte</option>
                                 </select>
-                                <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."ajout_reponse.png  "?>" alt="">
+                                <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."ajout_reponse.png"?>" id="ajout">
                             </div>
-                            <div class="reponse">
-                                <label for="">Réponse</label>
-                                <input type="text">
-                                <input type="checkbox">
-                                <input type="radio">
-                                <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."supprimer.png  "?>" alt="">
+                            <div id="videur">
+
                             </div>
                         </div>
                         <div class="button">
@@ -80,6 +81,7 @@
             </div>
         </div>
     </div>
+    <script src="<?= WEBROOT."script".DIRECTORY_SEPARATOR."creerQuestion.js"?>"></script>
 <?php
     require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
 ?>

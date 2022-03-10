@@ -351,6 +351,22 @@
             },
             "role": "ROLE_ADMIN",
             "score": 0
+        },
+        {
+            "prenom": "Mohamed",
+            "nom": "Ba",
+            "login": "mba25116@gmail.com",
+            "password": "admine1",
+            "image": {
+                "name": "mba25116@gmail.com",
+                "full_path": "",
+                "type": "",
+                "tmp_name": "",
+                "error": 4,
+                "size": 0
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
         }
     ]
 }

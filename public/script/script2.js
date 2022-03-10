@@ -73,7 +73,7 @@ email.addEventListener('input',()=>
     {
         emailInput.style.border = "3px solid red";
     }
-    else if(!emailInput.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g))
+    else if(!emailInput.value.match(/^[\w-\.]+@(gmail)+.(com)$/g))
     {
         emailInput.style.border = "3px solid red";
     }
