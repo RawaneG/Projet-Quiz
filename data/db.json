@@ -15,6 +15,278 @@
             },
             "role": "ROLE_ADMIN",
             "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "1",
+            "login": "a.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20210214-WA0012.jpg",
+                "full_path": "IMG-20210214-WA0012.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpOWIhMB",
+                "error": 0,
+                "size": 43186
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "2",
+            "login": "b.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20210214-WA0012.jpg",
+                "full_path": "IMG-20210214-WA0012.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpOWIhMB",
+                "error": 0,
+                "size": 43186
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "3",
+            "login": "c.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20210214-WA0012.jpg",
+                "full_path": "IMG-20210214-WA0012.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpOWIhMB",
+                "error": 0,
+                "size": 43186
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "4",
+            "login": "d.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20210214-WA0012.jpg",
+                "full_path": "IMG-20210214-WA0012.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpOWIhMB",
+                "error": 0,
+                "size": 43186
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "5",
+            "login": "e.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20210214-WA0012.jpg",
+                "full_path": "IMG-20210214-WA0012.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpOWIhMB",
+                "error": 0,
+                "size": 43186
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "6",
+            "login": "f.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20210214-WA0012.jpg",
+                "full_path": "IMG-20210214-WA0012.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpOWIhMB",
+                "error": 0,
+                "size": 43186
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "7",
+            "login": "g.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20210214-WA0012.jpg",
+                "full_path": "IMG-20210214-WA0012.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpOWIhMB",
+                "error": 0,
+                "size": 43186
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "8",
+            "login": "h.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20210214-WA0012.jpg",
+                "full_path": "IMG-20210214-WA0012.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpOWIhMB",
+                "error": 0,
+                "size": 43186
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "9",
+            "login": "i.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20210214-WA0012.jpg",
+                "full_path": "IMG-20210214-WA0012.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpOWIhMB",
+                "error": 0,
+                "size": 43186
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "The Coffee Guard",
+            "nom": "Sow",
+            "login": "coffee@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20211211-WA0039.jpg",
+                "full_path": "IMG-20211211-WA0039.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpMzWjHC",
+                "error": 0,
+                "size": 71136
+            },
+            "role": "ROLE_ADMIN",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "10",
+            "login": "j.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20211211-WA0039.jpg",
+                "full_path": "IMG-20211211-WA0039.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpMzWjHC",
+                "error": 0,
+                "size": 71136
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "11",
+            "login": "k.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20211211-WA0039.jpg",
+                "full_path": "IMG-20211211-WA0039.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpMzWjHC",
+                "error": 0,
+                "size": 71136
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "12",
+            "login": "l.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20211211-WA0039.jpg",
+                "full_path": "IMG-20211211-WA0039.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpMzWjHC",
+                "error": 0,
+                "size": 71136
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "13",
+            "login": "m.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20211211-WA0039.jpg",
+                "full_path": "IMG-20211211-WA0039.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpMzWjHC",
+                "error": 0,
+                "size": 71136
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "14",
+            "login": "n.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20211211-WA0039.jpg",
+                "full_path": "IMG-20211211-WA0039.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpMzWjHC",
+                "error": 0,
+                "size": 71136
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "15",
+            "login": "o.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20211211-WA0039.jpg",
+                "full_path": "IMG-20211211-WA0039.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpMzWjHC",
+                "error": 0,
+                "size": 71136
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "joueur",
+            "nom": "16",
+            "login": "p.sow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "IMG-20211211-WA0039.jpg",
+                "full_path": "IMG-20211211-WA0039.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpMzWjHC",
+                "error": 0,
+                "size": 71136
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
         }
     ]
 }

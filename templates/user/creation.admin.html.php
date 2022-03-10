@@ -135,7 +135,7 @@
             <div class="profil">
                 <div class="image_profile">
                         <label for="avatarInput" class="label">
-                            <img src=" " alt="" id="img">
+                            <img src=" " alt="" id="img" title="Veuillez entrer une photo de profil">
                         </label>
                         <input type="file" name="avatar" id="avatarInput" value="Choisir un fichier" onchange="load(this)">
                 </div>

@@ -46,7 +46,7 @@
                     <div class="title_joueurs">
                         <h2>LISTE DES JOUEURS PAR SCORE</h2>
                     </div>
-                    <div class="joueurs">
+                    <div class="joueurs" id="joueur">
                         <div class="joueurs_liste">
                             <div class="titles">
                                 <div class="nom">
@@ -65,9 +65,13 @@
                                     {
                                         foreach($row as $value)
                                         {
+                                            if($value['role'] == 'ROLE_ADMIN')
+                                            {
+                                                continue;
+                                            }
                                 ?>
                                 <tr>
-                                    <td><?= $value['nom']; ?></td>
+                                    <td><?= $value['nom'];?></td>
                                     <td><?= $value['prenom'];?></td>
                                     <td><?= $value['score'];?></td>
                                 </tr>
@@ -86,6 +90,7 @@
             </div>
         </div>
     </div>
+    <script src="<?= WEBROOT."script".DIRECTORY_SEPARATOR."liste.joueur.js";?>"></script>
 <?php
     require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
 ?>
