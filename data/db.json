@@ -287,6 +287,22 @@
             },
             "role": "ROLE_JOUEUR",
             "score": 0
+        },
+        {
+            "prenom": "Moustapha",
+            "nom": "Jonhson",
+            "login": "moustapha@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "846aa91ed88145d7939a512e4c40d817-1.jpg",
+                "full_path": "846aa91ed88145d7939a512e4c40d817-1.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpsDllCr",
+                "error": 0,
+                "size": 127792
+            },
+            "role": "ROLE_ADMIN",
+            "score": 0
         }
     ]
 }

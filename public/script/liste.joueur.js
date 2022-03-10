@@ -1,11 +1,10 @@
-let parent = document.getElementById('joueur');
 let table = document.getElementById('table');
 let cellules = document.querySelectorAll('tr');
-let grilles = document.querySelectorAll('td');
 let suivant = document.getElementById('suivant');
 let precedent = document.getElementById('precedent');
 let nombreDeValeursParPages = 10;
 let premier = 0;
+
 affichageListe();
 
 suivant.addEventListener('click',() =>

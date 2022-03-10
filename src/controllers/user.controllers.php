@@ -63,8 +63,7 @@ function inscription(string $name, string $prename,string $login, string $passwo
                     'role' => "ROLE_ADMIN",
                     'score' => 0
                 ];
-                $folder = ROOT."public/uploads/".$avatar['name'];
-                move_uploaded_file($avatar['tmp_name'], $folder);
+                upload($avatar);
                 $array_data['users'][] = $extra;  
                 $final_data = json_encode($array_data,JSON_PRETTY_PRINT);    
                 file_put_contents(PATH_DB, $final_data,true);  

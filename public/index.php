@@ -10,7 +10,8 @@
     //inclusion du convertisseur
     require_once dirname(dirname(__FILE__))."/config/orm.php";
     //inclusion des roles
-    require_once dirname(dirname(__FILE__))."/config/role.php";
-    
+    require_once dirname(dirname(__FILE__))."/config/role.php";    
+    //inclusion des photos
+    require_once dirname(dirname(__FILE__))."/config/uploads.php";
     //Chargement du router
     require_once dirname(dirname(__FILE__))."/config/router.php";
