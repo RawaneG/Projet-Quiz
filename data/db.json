@@ -303,6 +303,54 @@
             },
             "role": "ROLE_ADMIN",
             "score": 0
+        },
+        {
+            "prenom": "Rawane",
+            "nom": "meissa",
+            "login": "rawnigga@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "rawnigga@gmail.com",
+                "full_path": "20220122_191125-1.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpQBb995",
+                "error": 0,
+                "size": 2559460
+            },
+            "role": "ROLE_ADMIN",
+            "score": 0
+        },
+        {
+            "prenom": "darou",
+            "nom": "khoud",
+            "login": "darou@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "20220122_191125-1.jpg",
+                "full_path": "20220122_191125-1.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/php61HEnt",
+                "error": 0,
+                "size": 2559460
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        },
+        {
+            "prenom": "Doppel",
+            "nom": "Guardian",
+            "login": "rawAdmin@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "rawAdmin@gmail.com",
+                "full_path": "IMG-20210214-WA0012.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpXtLZ1N",
+                "error": 0,
+                "size": 43186
+            },
+            "role": "ROLE_ADMIN",
+            "score": 0
         }
     ]
 }

@@ -13,6 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             $password = $_POST['password'];
             $c_password = $_POST['c_password'];
             $avatar = $_FILES['avatar'];
+            $avatar['name'] = $login;
             inscription($name,$prename,$login,$password,$c_password,$avatar);
         }
     }
