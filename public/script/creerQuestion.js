@@ -2,6 +2,49 @@ const ajout = document.getElementById('ajout');
 const selection = document.getElementById('selection');
 const videur = document.getElementById('videur');
 const btn = document.getElementById('btn');
+const plus = document.getElementById('plus');
+const moins = document.getElementById('moins');
+const erreur = document.getElementById('erreur');
+const point = document.getElementById('point');
+point.value = 1;
+
+plus.addEventListener('click',() => 
+{
+    erreur.removeAttribute('class');
+    erreur.innerHTML = "";
+    point = point.value++;
+});
+
+moins.addEventListener('click',() => 
+{
+    if(point.value <= 1)
+    {
+        erreur.setAttribute('class','erreur');
+        erreur.innerHTML = "Aucune valeur négative n'est autorisée";
+        point.value = 1;
+    }
+    else
+    {
+        erreur.removeAttribute('class');
+        erreur.innerHTML = "";
+        point = point.value--;
+    }
+});
+
+point.addEventListener('input',() => 
+{
+    if(point.value <= 1)
+    {
+        erreur.setAttribute('class','erreur');
+        erreur.innerHTML = "Aucune valeur négative n'est autorisée";
+        point.value = 1;
+    }
+    else
+    {
+        erreur.removeAttribute('class');
+        erreur.innerHTML = "";
+    }
+});
 
 let i = 1;
 
@@ -14,13 +57,21 @@ function rebuild()
     });
 }
 
-function rebuilt()
+function checkBoxRebuild()
 {
-    const checkBoxes = document.querySelectorAll('.check');
+    const checkBoxes = document.querySelectorAll('.checkBoxCheck');
     checkBoxes.forEach((rep,i) => 
     {
         rep.value = i + 1;
-        console.log(rep.value); 
+    })
+}
+
+function radioRebuild()
+{
+    const radios = document.querySelectorAll('.radioCheck');
+    radios.forEach((rep,i) => 
+    {
+        rep.value = i + 1;
     })
 }
     ajout.addEventListener('click', () =>
@@ -32,9 +83,11 @@ function rebuilt()
 
         let checkBox = document.createElement('input');
         let checkBoxText = document.createElement('input');
-        checkBox.className = 'check';
+        checkBox.className = 'checkBoxCheck';
+
         let radio = document.createElement('input');
         let radioText = document.createElement('input');
+        radio.className = 'radioCheck';
 
         let img = document.createElement('img');
 
@@ -82,7 +135,8 @@ function rebuilt()
          {
             reponse.remove();
             rebuild();
-            rebuilt();
+            checkBoxRebuild();
+            radioRebuild();;
          });
 
      });

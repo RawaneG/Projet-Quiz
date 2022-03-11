@@ -57,7 +57,11 @@
                             </div>  
                             <div class="points">
                                 <label for="">Nbre de points</label>
-                                <input type="number" min = "0" name="nbrePoints">
+                                <div class="compteur">
+                                    <i class='fas fa-minus' style='font-size:24px;' id="moins"></i>
+                                    <input type="text" name="nbrePoints" id="point">
+                                    <i class='fas fa-plus' style='font-size:24px;' id="plus"></i>
+                                </div>
                             </div>
                             <div class="type_reponse">
                                 <label for="">Type de réponse</label>
@@ -69,6 +73,9 @@
                                 </select>
                                 <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."ajout_reponse.png"?>" id="ajout">
                             </div>
+                            <span id="erreur">
+
+                            </span>
                             <div id="videur">
 
                             </div>

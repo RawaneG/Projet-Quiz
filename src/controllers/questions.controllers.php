@@ -1,10 +1,6 @@
 <?php
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
-        echo "<pre>";
-        var_dump($_POST);
-        echo "</pre>";  
-        die();
         if(isset($_POST['action']))
         {
             if($_POST['action'] == "ask")
@@ -23,7 +19,7 @@
                 }
                 foreach ($_POST['checkBoxText'] as $value) 
                 {
-                    $checkboxText[] = $value;
+                    $checkBoxText[] = $value;
                 }
                 foreach ($_POST['radioText'] as $value) 
                 {
