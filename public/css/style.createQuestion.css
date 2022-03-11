@@ -167,6 +167,7 @@ body::before
     padding: 2%;
     text-align: center;
     color: red;
+    margin-bottom: 2%;
 }
 .points input
 {

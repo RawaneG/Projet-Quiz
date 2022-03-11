@@ -63,6 +63,9 @@
                                     <i class='fas fa-plus' style='font-size:24px;' id="plus"></i>
                                 </div>
                             </div>
+                            <span id="erreur">
+
+                            </span>
                             <div class="type_reponse">
                                 <label for="">Type de réponse</label>
                                 <select name="selection" id="selection" onchange="change();">
@@ -73,9 +76,6 @@
                                 </select>
                                 <img src="<?= WEBROOT."img".DIRECTORY_SEPARATOR."ajout_reponse.png"?>" id="ajout">
                             </div>
-                            <span id="erreur">
-
-                            </span>
                             <div id="videur">
 
                             </div>
