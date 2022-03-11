@@ -7,19 +7,31 @@ let i = 1;
     ajout.addEventListener('click', () =>
     {
         let reponse = document.createElement('div');
+
         let label = document.createElement('label');
-        let text = document.createElement('input');
+
         let checkBox = document.createElement('input');
+        let checkBoxText = document.createElement('input');
+
         let radio = document.createElement('input');
+        let radioText = document.createElement('input');
+
         let img = document.createElement('img');
 
         reponse.setAttribute('class','reponse');
+
         radio.setAttribute('type','radio');
-        radio.setAttribute('name','my_radio');
-        text.setAttribute('type','text');
-        text.setAttribute('name','my_text');
+        radio.setAttribute('name','radio');
+
+        radioText.setAttribute('type','text');
+        radioText.setAttribute('name','radioText[]');
+
         checkBox.setAttribute('type','checkbox');
-        checkBox.setAttribute('name','my_checkbox');
+        checkBox.setAttribute('name','checkbox');
+
+        checkBoxText.setAttribute('type','text');
+        checkBoxText.setAttribute('name','checkBoxText[]');
+
         img.setAttribute('src','../public/img/supprimer.png');
         img.setAttribute('onclick','remove()');
 
@@ -28,7 +40,7 @@ let i = 1;
 
             label.innerHTML = `Réponse ${i}`;
             reponse.appendChild(label);
-            reponse.appendChild(text);
+            reponse.appendChild(radioText);
             reponse.appendChild(radio);
             reponse.appendChild(img);
             videur.appendChild(reponse);
@@ -38,7 +50,7 @@ let i = 1;
         { 
             label.innerHTML = `Réponse ${i}`;
             reponse.appendChild(label);
-            reponse.appendChild(text);
+            reponse.appendChild(checkBoxText);
             reponse.appendChild(checkBox);
             reponse.appendChild(img);
             videur.appendChild(reponse);
@@ -57,8 +69,9 @@ let i = 1;
 function change()
 {
     videur.innerHTML = "";
+
     i = 1;
-    
+
     if(selection.value == 3) 
     {     
         let reponse = document.createElement('div');
@@ -69,6 +82,7 @@ function change()
         reponse.setAttribute('class','reponse');
         label.innerHTML = `Réponse`;
         text.setAttribute('type','text');
+        text.setAttribute('name','singleText');
         img.setAttribute('src','../public/img/supprimer.png');
 
         reponse.appendChild(label);
