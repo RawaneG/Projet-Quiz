@@ -138,7 +138,6 @@ body::before
     height: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     overflow: auto;
 }
 .question
@@ -146,6 +145,7 @@ body::before
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 2%;
 }
 .question input
 {
@@ -158,6 +158,7 @@ body::before
     align-items: center;
     justify-content: space-evenly;
     width: 35%;
+    margin-bottom: 2%;
 }
 .points input
 {
@@ -169,6 +170,7 @@ body::before
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 2%;
 }
 .type_reponse img
 {

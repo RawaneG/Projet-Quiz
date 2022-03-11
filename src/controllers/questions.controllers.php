@@ -1,6 +1,10 @@
 <?php
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
+        echo "<pre>";
+        var_dump($_POST);
+        echo "</pre>";  
+        die();
         if(isset($_POST['action']))
         {
             if($_POST['action'] == "ask")
@@ -9,8 +13,14 @@
                 $nbrePoints = correct($_POST['nbrePoints']);
                 $select = correct($_POST['selection']);
                 $text = $_POST['singleText'];
-                $checkboxText = [];
+                $radio = $_POST['radio'];
                 $radioText = [];
+                $checkBox = [];
+                $checkboxText = [];
+                foreach ($_POST['checkbox'] as $value) 
+                {
+                    $checkBox[] = $value;
+                }
                 foreach ($_POST['checkBoxText'] as $value) 
                 {
                     $checkboxText[] = $value;

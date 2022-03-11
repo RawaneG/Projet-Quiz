@@ -367,6 +367,22 @@
             },
             "role": "ROLE_JOUEUR",
             "score": 0
+        },
+        {
+            "prenom": "Darou Khoudoss",
+            "nom": "Khoudoss",
+            "login": "daroukhoudoss@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "daroukhoudoss@gmail.com",
+                "full_path": "Capture d\u2019\u00e9cran de 2022-01-22 21-44-36.png",
+                "type": "image\/png",
+                "tmp_name": "\/opt\/lampp\/temp\/phpGuGhHl",
+                "error": 0,
+                "size": 427098
+            },
+            "role": "ROLE_ADMIN",
+            "score": 0
         }
     ]
 }

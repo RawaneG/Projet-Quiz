@@ -57,7 +57,7 @@
                             </div>  
                             <div class="points">
                                 <label for="">Nbre de points</label>
-                                <input type="number" min = "1" name="nbrePoints">
+                                <input type="number" min = "0" name="nbrePoints">
                             </div>
                             <div class="type_reponse">
                                 <label for="">Type de réponse</label>
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <div class="button">
-                        <button>Enregistrer</button>
+                        <button id="btn">Enregistrer</button>
                         </div>
                     </form>
                 </div>

@@ -2,7 +2,7 @@ let table = document.getElementById('table');
 let cellules = document.querySelectorAll('tr');
 let suivant = document.getElementById('suivant');
 let precedent = document.getElementById('precedent');
-let nombreDeValeursParPages = 10;
+let nombreDeValeursParPages = 5;
 let premier = 0;
 
 affichageListe();
@@ -15,7 +15,10 @@ suivant.addEventListener('click',() =>
         affichageListe();
         precedent.style.visibility = "visible";
     }
-    suivant.style.visibility = "hidden";
+    else
+    {
+        suivant.style.visibility = "hidden";
+    }
 });
 
 precedent.addEventListener('click',() =>
@@ -26,7 +29,10 @@ precedent.addEventListener('click',() =>
         affichageListe();
         suivant.style.visibility = "visible";
     }
-    precedent.style.visibility = "hidden";
+    else
+    {
+        precedent.style.visibility = "hidden";
+    }
 });
 
 function affichageListe()
