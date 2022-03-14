@@ -1,12 +1,12 @@
-<?php
+<?php    
     require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
 ?>
-        <div class="user">
+    <div class="user">
             <div class="title">
-                <h2>CRÉER ET PARAMÉTRER VOS QUIZZ</h2>
+                <h2>CRÉER ET PARAMÉTRER VOS QUIZZ</h2>  
                 <a href="<?= WEBROOT."?controller=securite&action=deconnexion"?>">Déconnexion</a>
             </div>
-            <div class="content" id="content">
+            <div class="content">
                 <div class="profile">   
                     <div class="head">
                         <div class="image">
@@ -16,9 +16,9 @@
                     </div>
                     <div class="bottom">
                             <div class="liste">
-                                <a href="<?=WEBROOT."?controller=user&action=listeQuestions"?>">
+                                <a href="<?=WEBROOT."?controller=user&action=listeQuestions"?>" class="active" >
                                     <h4>Liste Questions</h4>
-                                    <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."liste.png"?>" alt="">
+                                    <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."liste_active.png"?>" alt="">
                                 </a>
                             </div>
                             <div class="liste">
@@ -42,9 +42,13 @@
                         </ul>
                     </div>
                 </div>
+                <div class="main">
+                   
+                </div>
             </div>
         </div>
     </div>
+    <script src="<?= WEBROOT."script".DIRECTORY_SEPARATOR."liste.question.js";?>"></script>
 <?php
     require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."footer.html.php");
 ?>

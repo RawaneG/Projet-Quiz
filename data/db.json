@@ -399,6 +399,69 @@
             },
             "role": "ROLE_JOUEUR",
             "score": 0
+        },
+        {
+            "prenom": "El hadj Rawane",
+            "nom": "Gningue",
+            "login": "rawaneSow@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "WhatsApp Image 2022-02-09 at 12.48.50.jpeg",
+                "full_path": "WhatsApp Image 2022-02-09 at 12.48.50.jpeg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/php7lkAZR",
+                "error": 0,
+                "size": 96804
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
+        }
+    ],
+    "questions": [
+        {
+            "question": "Les langages Web",
+            "points": "10",
+            "tdrCheckbox": [
+                "HTML",
+                "R",
+                "JAVA"
+            ],
+            "correctCheckbox": [
+                "R",
+                "JAVA"
+            ]
+        },
+        {
+            "question": "D&#039;ou vient le Corona ?",
+            "points": "10",
+            "tdrRadio": [
+                "Italie",
+                "Chine"
+            ],
+            "correctRadio": "Chine"
+        },
+        {
+            "question": "Quel terme d\u00e9finit le langage qui s&#039;adapte sur Android et et sur Ios",
+            "points": "20",
+            "text": "Hybride"
+        },
+        {
+            "question": "Quelle est la premi\u00e8re \u00e9cole de codage gratuire au S\u00e9n\u00e9gal",
+            "points": "10",
+            "tdrRadio": [
+                "Simplon",
+                "Orange Digital Center"
+            ],
+            "correctRadio": "Orange Digital Center"
+        },
+        {
+            "question": "Les pr\u00e9curseurs de  la r\u00e9volution digitale",
+            "points": "25",
+            "tdrRadio": [
+                "GAFAM",
+                "CIA-FBI"
+            ],
+            "correctRadio": "GAFAM"
         }
     ]
 }

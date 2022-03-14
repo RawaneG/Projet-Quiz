@@ -17,7 +17,7 @@ plus.addEventListener('click',() =>
 
 moins.addEventListener('click',() => 
 {
-    if(point.value <= 1)
+    if(point.value <= 0)
     {
         erreur.setAttribute('class','erreur');
         erreur.innerHTML = "Aucune valeur négative n'est autorisée";
@@ -33,7 +33,7 @@ moins.addEventListener('click',() =>
 
 point.addEventListener('input',() => 
 {
-    if(point.value <= 1)
+    if(point.value <= 0)
     {
         erreur.setAttribute('class','erreur');
         erreur.innerHTML = "Aucune valeur négative n'est autorisée";
@@ -96,16 +96,26 @@ function radioRebuild()
         radio.setAttribute('type','radio');
         radio.setAttribute('name','radio');
 
+
         radioText.setAttribute('type','text');
         radioText.setAttribute('name','radioText[]');
 
 
         checkBox.setAttribute('type','checkbox');
         checkBox.setAttribute('name','checkbox[]');
-        checkBox.setAttribute('value',`${i}`);
 
         checkBoxText.setAttribute('type','text');
         checkBoxText.setAttribute('name','checkBoxText[]');
+
+        checkBoxText.addEventListener('input',() => 
+        {
+            checkBox.value = checkBoxText.value;
+        });
+
+        radioText.addEventListener('input', () => 
+        {
+            radio.value = radioText.value
+        });
 
         img.setAttribute('src','../public/img/supprimer.png');
 
@@ -128,6 +138,7 @@ function radioRebuild()
             reponse.appendChild(checkBox);
             reponse.appendChild(img);
             videur.appendChild(reponse);
+
             i++;
         }  
 

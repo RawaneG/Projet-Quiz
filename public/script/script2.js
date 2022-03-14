@@ -44,7 +44,7 @@ function enable(e)
     e.style.pointerEvents = "";
 }
 
-disabled(submit);
+// disabled(submit);
 
 function valid_name(e)
 {
@@ -73,7 +73,7 @@ email.addEventListener('input',()=>
     {
         emailInput.style.border = "3px solid red";
     }
-    else if(!emailInput.value.match(/^[\w-\.]+@(gmail)+.(com)$/g))
+    else if(!emailInput.value.match(/^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/))
     {
         emailInput.style.border = "3px solid red";
     }

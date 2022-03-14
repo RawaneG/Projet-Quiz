@@ -21,7 +21,7 @@
                     </div>
                     <div class="bottom">
                             <div class="liste">
-                                <a href="<?=WEBROOT."?controller=user&action=listeQestions"?>">
+                                <a href="<?=WEBROOT."?controller=user&action=listeQuestions"?>">
                                     <h4>Liste Questions</h4>
                                     <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."liste.png"?>" alt="">
                                 </a>

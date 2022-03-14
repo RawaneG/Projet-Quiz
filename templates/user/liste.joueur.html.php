@@ -16,7 +16,7 @@
                     </div>
                     <div class="bottom">
                             <div class="liste">
-                                <a href="<?=WEBROOT."?controller=user&action=listeQestions"?>">
+                                <a href="<?=WEBROOT."?controller=user&action=listeQuestions"?>">
                                     <h4>Liste Questions</h4>
                                     <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."liste.png"?>" alt="">
                                 </a>
@@ -61,14 +61,16 @@
                             </div>
                             <table id="table"> 
                                 <?php 
-                                    foreach($old_record as $row)
+                                    foreach($old_record as $key=>$row)
                                     {
-                                        foreach($row as $value)
+                                        if ($key == 'users') 
                                         {
-                                            if($value['role'] == 'ROLE_ADMIN')
+                                            foreach($row as $value)
                                             {
-                                                continue;
-                                            }
+                                                if($value['role'] == 'ROLE_ADMIN')
+                                                {
+                                                    continue;
+                                                }
                                 ?>
                                 <tr>
                                     <td><?= $value['nom'];?></td>
@@ -76,6 +78,7 @@
                                     <td><?= $value['score'];?></td>
                                 </tr>
                                 <?php
+                                            }
                                         }
                                     }
                                 ?>

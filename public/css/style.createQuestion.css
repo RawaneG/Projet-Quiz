@@ -163,8 +163,6 @@ body::before
 }
 .erreur
 {
-    border: 2px solid red;
-    padding: 2%;
     text-align: center;
     color: red;
     margin-bottom: 2%;

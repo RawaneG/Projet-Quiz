@@ -25,11 +25,11 @@ loginInput.addEventListener('input', () =>
     {
         loginInput.style.border = "2px solid red";
     }
-    else if(!login.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g))
+    else if(!login.value.match(/^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail(\.)com$/))
     {
         loginInput.style.border = "2px solid red";
     }
-    else
+    else    
     {
         loginInput.style.border = "2px solid green";
     }
@@ -60,7 +60,7 @@ form.addEventListener('submit', (e) => {
         loginErr.push('Veuillez remplir votre login');
         loginInput.style.border = "2px solid red";
     }
-    else if(!login.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g))
+    else if(!login.value.match(/^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/))
     {
         loginErr.push('Veuillez entrer un email valide');
         loginInput.style.border = "2px solid red";

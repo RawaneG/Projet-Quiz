@@ -9,7 +9,7 @@ affichageListe();
 
 suivant.addEventListener('click',() =>
 {
-    if(premier + nombreDeValeursParPages <= cellules.length)
+    if(premier + nombreDeValeursParPages < cellules.length)
     {
         premier += nombreDeValeursParPages;
         affichageListe();
@@ -23,7 +23,7 @@ suivant.addEventListener('click',() =>
 
 precedent.addEventListener('click',() =>
 {
-    if(premier - nombreDeValeursParPages >= 0)
+    if(premier - nombreDeValeursParPages > 0)
     {
         premier -= nombreDeValeursParPages;
         affichageListe();

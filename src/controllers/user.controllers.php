@@ -118,6 +118,10 @@ if($_SERVER['REQUEST_METHOD'] == "GET")
         {
             require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."creation.admin.html.php");
         }
+        else if(($_GET['action']) == 'listeQuestions')
+        {
+            require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."liste.question.html.php");
+        }
         else
         {
             require_once(PATH_VIEWS."securite".DIRECTORY_SEPARATOR."connexion.html.php");

@@ -1,5 +1,10 @@
 <?php    
     require_once(PATH_VIEWS."include".DIRECTORY_SEPARATOR."header.html.php");
+    if(isset($_SESSION[KEY_ERRORS]))
+    {
+        $errors = $_SESSION[KEY_ERRORS];
+        unset($_SESSION[KEY_ERRORS]);
+    }
 ?>
     <div class="user">
             <div class="title">
@@ -16,7 +21,7 @@
                     </div>
                     <div class="bottom">
                             <div class="liste">
-                                <a href="<?=WEBROOT."?controller=user&action=listeQestions"?>">
+                                <a href="<?=WEBROOT."?controller=user&action=listeQuestions"?>">
                                     <h4>Liste Questions</h4>
                                     <img src="<?=WEBROOT."img".DIRECTORY_SEPARATOR."liste.png"?>" alt="">
                                 </a>
@@ -55,6 +60,14 @@
                                 <label for="">Questions</label>
                                 <input type="text" name="question"></input>
                             </div>  
+                            <span class="erreur">
+                                <?php 
+                                    if(isset($errors['question']))
+                                    {
+                                        echo $errors['question'];
+                                    }
+                                ?>
+                            </span>
                             <div class="points">
                                 <label for="">Nbre de points</label>
                                 <div class="compteur">
@@ -69,7 +82,7 @@
                             <div class="type_reponse">
                                 <label for="">Type de réponse</label>
                                 <select name="selection" id="selection" onchange="change();">
-                                    <option>Veuillez choisir le type de réponse</option>
+                                    <option value="0">Veuillez choisir le type de réponse</option>
                                     <option value="1">Choix Simple</option>
                                     <option value="2">Choix Multiple</option>
                                     <option value="3">Texte</option>
@@ -79,6 +92,14 @@
                             <div id="videur">
 
                             </div>
+                            <span class="erreur">
+                                <?php 
+                                    if(isset($errors['input']))
+                                    {
+                                        echo $errors['input'];
+                                    }
+                                ?>
+                            </span>
                         </div>
                         <div class="button">
                         <button id="btn">Enregistrer</button>
