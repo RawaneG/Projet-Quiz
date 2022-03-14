@@ -383,6 +383,22 @@
             },
             "role": "ROLE_ADMIN",
             "score": 0
+        },
+        {
+            "prenom": "r",
+            "nom": "a",
+            "login": "wa@gmail.com",
+            "password": "rawane10",
+            "image": {
+                "name": "20220122_191125-1.jpg",
+                "full_path": "20220122_191125-1.jpg",
+                "type": "image\/jpeg",
+                "tmp_name": "\/opt\/lampp\/temp\/phpyMruqO",
+                "error": 0,
+                "size": 2559460
+            },
+            "role": "ROLE_JOUEUR",
+            "score": 0
         }
     ]
 }

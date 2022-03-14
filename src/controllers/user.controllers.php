@@ -13,7 +13,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             $password = correct($_POST['password']);
             $c_password = correct($_POST['c_password']);
             $avatar = $_FILES['avatar'];
-            $avatar['name'] = $login;
             inscription($name,$prename,$login,$password,$c_password,$avatar);
         }
     }
@@ -64,7 +63,10 @@ function inscription(string $name, string $prename,string $login, string $passwo
                     'role' => "ROLE_ADMIN",
                     'score' => 0
                 ];
-                upload($avatar);
+                $login_debut = explode("@gmail",$login);
+                $avatar['name'] = $login_debut[0]."ROLE_ADMIN";
+                $unique_name = $avatar['name'];
+                upload($avatar,$unique_name);
                 $array_data['users'][] = $extra;  
                 $final_data = json_encode($array_data,JSON_PRETTY_PRINT);    
                 file_put_contents(PATH_DB, $final_data,true);  

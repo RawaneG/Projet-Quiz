@@ -25,6 +25,10 @@
                 {
                     $radioText[] = $value;
                 }
+                echo "<pre>";
+                    echo $_POST;
+                echo "</pre>";
+                die();
                 require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR.'creation.question.html.php');
             }
         }

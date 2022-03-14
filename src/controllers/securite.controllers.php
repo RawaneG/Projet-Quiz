@@ -1,4 +1,7 @@
 <?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 require_once(PATH_SRC."models".DIRECTORY_SEPARATOR."user.model.php");
 /**
 * Traitement des Requetes POST
@@ -22,7 +25,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
             $password = correct($_POST['password']);
             $c_password = correct($_POST['c_password']);
             $avatar = $_FILES['avatar'];  
-            $avatar['name'] = $login;
             inscription($name,$prename,$login,$password,$c_password,$avatar);
         }
     }
@@ -119,7 +121,10 @@ string | array $avatar):void
                     'role' => "ROLE_JOUEUR",
                     'score' => 0
                 ];
-                upload($avatar);
+                $login_debut = explode("@gmail",$login);
+                $avatar['name'] = $login_debut[0]."ROLE_JOUEUR";
+                $unique_name = $avatar['name'];
+                upload($avatar,$unique_name);
                 $array_data['users'][] = $extra;  
                 $final_data = json_encode($array_data,JSON_PRETTY_PRINT);    
                 file_put_contents(PATH_DB, $final_data,true);  
