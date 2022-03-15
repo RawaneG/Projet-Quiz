@@ -43,7 +43,75 @@
                     </div>
                 </div>
                 <div class="main">
-                   
+                    <div class="premier_div">
+                        <label for="">Nbre de question/Jeu</label>
+                        <input type="text">
+                        <input type="submit" value="OK">
+                    </div>
+                    <div class="second_div">
+                        <div class="conteneur" id="conteneur">
+                            <ol>
+                                <?php
+                                    foreach ($old_record as $key => $row) 
+                                    {
+                                        if($key == 'questions')
+                                        {
+                                            foreach ($row as $value) 
+                                            {
+                                ?>
+                                                <li><?=$value['question'];?></li>
+                                <?php
+                                                if(isset($value['tdrCheckbox']))
+                                                {
+                                ?>
+                                                    <div class="div_checkbox">
+                                <?php
+                                                    foreach ($value['tdrCheckbox'] as $checkbox) 
+                                                    {
+                                ?>
+                                                        <div class="element_checkbox">
+                                                            <input type="checkbox" class="checkbox"><?=$checkbox;?>
+                                                        </div>
+                                <?php
+                                                    }
+                                ?>
+                                                    </div>
+                                <?php
+                                                }
+                                                elseif(isset($value['tdrRadio']))
+                                                {
+                                ?>
+                                                    <div class="div_radio">
+                                <?php
+                                                    foreach ($value['tdrRadio'] as $radio) 
+                                                    {
+                                ?>
+                                                    <div class="element_radio">
+                                                        <input type="radio" name="radio" class="radio"><?=$radio;?>
+                                                    </div>
+                                <?php
+                                                    }
+                                ?>
+                                                    </div>
+                                <?php
+                                                }
+                                                else
+                                                {
+                                ?>
+                                                    <input type="text" class="input">
+                                <?php
+                                                }
+                                            }
+                                        }
+                                    }
+                                ?>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="troisieme_div">
+                        <button class="precedent">Précédent</button>
+                        <button>Suivant</button>
+                    </div>
                 </div>
             </div>
         </div>

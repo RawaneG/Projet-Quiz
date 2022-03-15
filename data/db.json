@@ -441,12 +441,12 @@
             "correctRadio": "Chine"
         },
         {
-            "question": "Quel terme d\u00e9finit le langage qui s&#039;adapte sur Android et et sur Ios",
+            "question": "Quel terme d\u00e9finit le langage qui s&#039;adapte sur Android et et sur Ios ?",
             "points": "20",
             "text": "Hybride"
         },
         {
-            "question": "Quelle est la premi\u00e8re \u00e9cole de codage gratuire au S\u00e9n\u00e9gal",
+            "question": "Quelle est la premi\u00e8re \u00e9cole de codage gratuire au S\u00e9n\u00e9gal ?",
             "points": "10",
             "tdrRadio": [
                 "Simplon",
