@@ -45,7 +45,7 @@
                 <div class="main">
                     <div class="premier_div">
                         <label for="">Nbre de question/Jeu</label>
-                        <input type="text">
+                        <input type="text" id="compteur">
                         <input type="submit" value="OK">
                     </div>
                     <div class="second_div">
@@ -64,13 +64,13 @@
                                                 if(isset($value['tdrCheckbox']))
                                                 {
                                 ?>
-                                                    <div class="div_checkbox">
+                                                    <div class="div_checkbox rep">
                                 <?php
                                                     foreach ($value['tdrCheckbox'] as $checkbox) 
                                                     {
                                 ?>
-                                                        <div class="element_checkbox">
-                                                            <input type="checkbox" class="checkbox"><?=$checkbox;?>
+                                                        <div class="element_checkbox" id="checkbox">
+                                                        <input type="checkbox" class="checkbox"><?=$checkbox;?>
                                                         </div>
                                 <?php
                                                     }
@@ -81,13 +81,13 @@
                                                 elseif(isset($value['tdrRadio']))
                                                 {
                                 ?>
-                                                    <div class="div_radio">
+                                                    <div class="div_radio rep">
                                 <?php
                                                     foreach ($value['tdrRadio'] as $radio) 
                                                     {
                                 ?>
-                                                    <div class="element_radio">
-                                                        <input type="radio" name="radio" class="radio"><?=$radio;?>
+                                                    <div class="element_radio" id="radio">
+                                                    <input type="radio" name="radio" class="radio"><?=$radio;?>
                                                     </div>
                                 <?php
                                                     }
@@ -97,8 +97,10 @@
                                                 }
                                                 else
                                                 {
-                                ?>
+                                ?>                  
+                                                <div class="rep">
                                                     <input type="text" class="input">
+                                                </div>
                                 <?php
                                                 }
                                             }
@@ -109,8 +111,8 @@
                         </div>
                     </div>
                     <div class="troisieme_div">
-                        <button class="precedent">Précédent</button>
-                        <button>Suivant</button>
+                        <button class="precedent" id="precedent">Précédent</button>
+                        <button id="suivant">Suivant</button>
                     </div>
                 </div>
             </div>

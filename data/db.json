@@ -462,6 +462,24 @@
                 "CIA-FBI"
             ],
             "correctRadio": "GAFAM"
+        },
+        {
+            "question": "Qui est le plus con de la classe ?",
+            "points": "25",
+            "tdrCheckbox": [
+                "Mbaye Sow",
+                "Youssoupha Bojang",
+                "Podio",
+                "Fama",
+                "Mamadou Ndiaye "
+            ],
+            "correctCheckbox": [
+                "Mbaye Sow",
+                "Youssoupha Bojang",
+                "Podio",
+                "Fama",
+                "Mamadou Ndiaye "
+            ]
         }
     ]
 }
