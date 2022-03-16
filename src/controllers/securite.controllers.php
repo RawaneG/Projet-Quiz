@@ -73,7 +73,6 @@ string | array $avatar):void
     champ_obligatoire("login",$login,$errors,"L'email est requis");
     champ_obligatoire("password",$password,$errors,"Le mot de passe est requis");
     champ_obligatoire("c_password",$c_password,$errors,"La confirmation est requise");
-    champ_obligatoire("avatar",$avatar,$errors,"Veuillez rentrer une image");
 
     if(!isset($errors['login']))
     {
@@ -85,7 +84,22 @@ string | array $avatar):void
     {
         valid_password("password",$password,$errors);
     }
-    
+    foreach($avatar as $key => $value)
+    {
+        if($value == '')
+        {
+            $errors['avatar'] = "Veuillez entrer une image";
+        }
+    }
+
+    $extension = ['image/jpeg','image/png'];
+    foreach ($extension as $value) 
+    {
+        if(!in_array($avatar['type'],$extension))
+        {
+            $errors['extension'] = "Veuillez entrer une image valide";
+        }
+    }
     if($password != $c_password)
     {
         $errors['password'] = "Les mots de passe ne sont pas identiques";

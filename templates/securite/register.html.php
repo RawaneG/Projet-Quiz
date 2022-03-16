@@ -91,14 +91,6 @@
                             }
                         ?>
                     </span>
-                        <span class="message">
-                            <?php 
-                                if(isset($errors['avatar']))
-                                {
-                                    echo $errors['avatar'];
-                                }
-                            ?>
-                        </span>
                     <input type="submit" value="Créer un compte" id="submit">
                 </div>
             </div>
@@ -112,6 +104,22 @@
                 <div class="title">
                     <h4>Avatar du Joueur</h4>
                 </div>
+                <span class="message">
+                        <?php 
+                            if(isset($errors['avatar']))
+                            {
+                                echo $errors['avatar'];
+                            }
+                        ?>
+                </span>
+                <span class="message">
+                        <?php 
+                            if(isset($errors['extension']))
+                            {
+                                echo $errors['extension'];
+                            }
+                        ?>
+                </span>
             </div>
         </form>
     </div>
