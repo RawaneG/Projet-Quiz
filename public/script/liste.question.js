@@ -12,8 +12,15 @@ let precedent = document.getElementById('precedent');
 compteur.value = questionCompteurs.length;
 compteur.setAttribute('disabled','disabled');
 
+let input = conteneur.querySelectorAll('input');
+
 let start = 0;
 let nombreParPages = 5;
+
+for(let i = 0; i < input.length; i++)
+{
+    input[i].setAttribute('disabled','disabled');
+}
 
 paginer();
 
@@ -53,12 +60,14 @@ function paginer()
         if(i < questionCompteurs.length)
         {
             valeur += 
-            `<ol>
-                ${questionCompteurs[i].innerHTML}
+            `
+            <ol>
+            ${i+1} - ${questionCompteurs[i].innerHTML}
                 <div>
                     ${inputs[i].innerHTML}
                 </div>
-            </ol>`;
+            </ol>
+            `;
         }
     }
     conteneur.innerHTML = valeur;

@@ -99,7 +99,7 @@
                                                 {
                                 ?>                  
                                                 <div class="rep">
-                                                    <input type="text" class="input">
+                                                    <input type="text" class="input_text">
                                                 </div>
                                 <?php
                                                 }
